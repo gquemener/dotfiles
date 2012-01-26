@@ -101,10 +101,16 @@ parse_git_branch() {
 parse_git_commit() {
     git log -1 | grep 'commit' | awk '{print substr($2,1,10)}'
 }
-PS1="\[\033[1;34m\]\w\$(parse_git_branch)\[\033[0;32m\] \$(parse_git_commit) \$(is_modified) \[\033[0m\]$ "
+export PS1="{\$(date +%H:%M)} \[\033[1;34m\]\$(parse_git_branch)\[\033[1;36m\] \$(parse_git_commit) \[\033[1;32m\]\$(count_by_git_add)\[\033[1;33m\]\$(count_by_git_mod)\[\033[1;31m\]\$(count_by_git_del) \[\033[0m\] $PS1"
 
-is_modified() {
-    git status -s | grep '^ M' | wc -l
+count_by_git_add() {
+    git status -s | grep '^[AM]' | wc -l
+}
+count_by_git_mod() {
+    git status -s | grep '^.M' | wc -l
+}
+count_by_git_del() {
+    git status -s | grep '^.D' | wc -l
 }
 
 # some more ls aliases
