@@ -58,3 +58,6 @@ let mapleader=","
 "PowerLine
 let g:Powerline_symbols = 'fancy'
 let g:PowerLine_cache_file="/tmp/powerline.cache"
+
+"snipMate
+let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
