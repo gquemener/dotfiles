@@ -1,11 +1,10 @@
 call pathogen#infect()
 
 set nocompatible                  " Must come first because it changes other options.
+set encoding=utf-8
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
-
-runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -43,13 +42,20 @@ set autoindent
 set smartindent
 set list
 set listchars=eol:¤,trail:-,tab:>-
+
 if has('gui_running')
     set listchars=eol:⳾,tab:▸\ ,trail:⳽
+    set guifont=Monaco\ for\ Powerline    " set fonts for gui vim
+    set guioptions=egmrt
 endif
 
 set laststatus=2                  " Show the status line all the time
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 colorscheme vivify
 
 let mapleader=","
+
+"PowerLine
+let g:Powerline_symbols = 'fancy'
+
+let g:PowerLine_cache_file="/tmp/powerline.cache"
