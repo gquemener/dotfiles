@@ -40,12 +40,10 @@ set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 set autoindent
 set smartindent
-set list
-set listchars=eol:¤,trail:-,tab:>-
+set nolist
 
 if has('gui_running')
-    set listchars=eol:⳾,tab:▸\ ,trail:⳽
-    set guifont=Monaco\ for\ Powerline    " set fonts for gui vim
+    set guifont=Monaco\ for\ Powerline\ 10  " set fonts for gui vim
     set guioptions=egmrt
 endif
 
