@@ -57,5 +57,4 @@ let mapleader=","
 
 "PowerLine
 let g:Powerline_symbols = 'fancy'
-
 let g:PowerLine_cache_file="/tmp/powerline.cache"

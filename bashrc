@@ -96,22 +96,35 @@ fi
 
 # prompt that display current git branch
 parse_git_branch() {
+  if [ -d ".git" ]; then
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  fi
 }
 parse_git_commit() {
-    git log -1 | grep 'commit' | awk '{print substr($2,1,10)}'
+  if [ -d ".git" ]; then
+    git log -1 2> /dev/null | grep 'commit' | awk '{print substr($2,1,10)}'
+  fi
 }
-export PS1="{\$(date +%H:%M)} \[\033[1;34m\]\$(parse_git_branch)\[\033[1;36m\] \$(parse_git_commit) \[\033[1;32m\]\$(count_by_git_add)\[\033[1;33m\]\$(count_by_git_mod)\[\033[1;31m\]\$(count_by_git_del)\[\033[1;35m\]\$(count_by_git_unt) \[\033[0m\] $PS1"
 
 count_by_git_add() {
-    git status -s | grep '^[AMR]' | wc -l
+  if [ -d ".git" ]; then
+    git status -s 2> /dev/null | grep '^[AMR]' | wc -l
+  fi
 }
 count_by_git_mod() {
-    git status -s | grep '^.M' | wc -l
+  if [ -d ".git" ]; then
+    git status -s 2> /dev/null | grep '^.M' | wc -l
+  fi
 }
 count_by_git_del() {
-    git status -s | grep '^.D' | wc -l
+  if [ -d ".git" ]; then
+    git status -s 2> /dev/null | grep '^.D' | wc -l
+  fi
 }
 count_by_git_unt() {
-    git status -s | grep '^??' | wc -l
+  if [ -d ".git" ]; then
+    git status -s 2> /dev/null | grep '^??' | wc -l
+  fi
 }
+
+export PS1="\[\033[0;32m\]{\$(date +%H:%M)} \$(parse_git_branch) \$(parse_git_commit) \$(count_by_git_add)\$(count_by_git_mod)\$(count_by_git_del)\$(count_by_git_unt) [\w] \[\033[0;37m\]"
