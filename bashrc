@@ -101,7 +101,7 @@ parse_git_branch() {
 parse_git_commit() {
     git log -1 | grep 'commit' | awk '{print substr($2,1,10)}'
 }
-export PS1="{\$(date +%H:%M)} \[\033[1;34m\]\$(parse_git_branch)\[\033[1;36m\] \$(parse_git_commit) \[\033[1;32m\]\$(count_by_git_add)\[\033[1;33m\]\$(count_by_git_mod)\[\033[1;31m\]\$(count_by_git_del) \[\033[0m\] $PS1"
+export PS1="{\$(date +%H:%M)} \[\033[1;34m\]\$(parse_git_branch)\[\033[1;36m\] \$(parse_git_commit) \[\033[1;32m\]\$(count_by_git_add)\[\033[1;33m\]\$(count_by_git_mod)\[\033[1;31m\]\$(count_by_git_del)\[\033[1;35m\]\$(count_by_git_unt) \[\033[0m\] $PS1"
 
 count_by_git_add() {
     git status -s | grep '^[AMR]' | wc -l
@@ -111,6 +111,9 @@ count_by_git_mod() {
 }
 count_by_git_del() {
     git status -s | grep '^.D' | wc -l
+}
+count_by_git_unt() {
+    git status -s | grep '^??' | wc -l
 }
 
 # some more ls aliases
