@@ -13,4 +13,4 @@ ln -nfs ~/bin/dotfiles/fonts ~/.fonts
 fc-cache -vf
 
 echo -e "$GREEN" "Installed Plugin:" "$NORMAL"
-git submodule summary╝╝
+git submodule summary
