@@ -53,6 +53,7 @@ set laststatus=2                  " Show the status line all the time
 colorscheme vivify
 
 let mapleader=","
+map <leader>u :call PhpInsertUse()<cr>
 
 "PowerLine
 let g:Powerline_symbols = 'fancy'

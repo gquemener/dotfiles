@@ -61,7 +61,7 @@ highlight PreCondit           guifg=#eeeeee ctermfg=255                         
 highlight PreProc             guifg=#e5786d ctermfg=167                           gui=none cterm=none
 highlight Question            guifg=#eeeeee ctermfg=255                           gui=none cterm=none
 highlight Repeat              guifg=#eeeeee ctermfg=255                           gui=none cterm=none
-highlight Search              guifg=#eeeeee ctermfg=255                           gui=none cterm=none
+highlight Search              guifg=#eeeeee ctermfg=255 guibg=#666666             gui=none cterm=none
 highlight SignColumn          guifg=#eeeeee ctermfg=255                           gui=none cterm=none
 highlight Special             guifg=#e7f6da ctermfg=193                           gui=none cterm=none
 highlight SpecialChar         guifg=#eeeeee ctermfg=255                           gui=none cterm=none
