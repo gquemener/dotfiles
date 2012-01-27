@@ -108,17 +108,17 @@ parse_git_commit() {
 
 count_by_git_add() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^[AMR]' | wc -l
+    git status -s 2> /dev/null | grep '^[A ][ A]' | wc -l
   fi
 }
 count_by_git_mod() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^.M' | wc -l
+    git status -s 2> /dev/null | grep '^[M ][ M]' | wc -l
   fi
 }
 count_by_git_del() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^.D' | wc -l
+    git status -s 2> /dev/null | grep '^[D ][ D]' | wc -l
   fi
 }
 count_by_git_unt() {
@@ -127,4 +127,4 @@ count_by_git_unt() {
   fi
 }
 
-export PS1="\[\033[0;32m\]{\$(date +%H:%M)} \$(parse_git_branch) \$(parse_git_commit) \$(count_by_git_add)\$(count_by_git_mod)\$(count_by_git_del)\$(count_by_git_unt) [\w] \[\033[0;37m\]"
+export PS1="\[\033[0;33m\]{\$(date +%H:%M)} \$(parse_git_branch) \$(parse_git_commit) \$(count_by_git_add).\$(count_by_git_mod).\$(count_by_git_del).\$(count_by_git_unt) [\w] \[\033[0;37m\]"
