@@ -13,3 +13,6 @@
 [submodule "bundle/twig"]
 	path = bundle/twig
 	url = https://github.com/beyondwords/vim-twig.git
+[submodule "bundle/symfony"]
+	path = bundle/symfony
+	url = https://github.com/ludovicbarreca/vim-symfony.git
