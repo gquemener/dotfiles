@@ -37,7 +37,7 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set tabstop=4                    " Global tab width.
 set softtabstop=4
-set shiftwidth=2                 " And again, related.
+set shiftwidth=4                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 set autoindent
 set smartindent
