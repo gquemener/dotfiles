@@ -1,0 +1,13 @@
+[user]
+    name = Gildas Quéméner
+    email = gildas.quemener@knplabs.com
+[alias]
+    co = checkout
+[color]
+    ui = true
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+[core]
+	excludesfile = ~/.cvsignore
