@@ -16,3 +16,6 @@
 [submodule "bundle/symfony"]
 	path = bundle/symfony
 	url = https://github.com/ludovicbarreca/vim-symfony.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
