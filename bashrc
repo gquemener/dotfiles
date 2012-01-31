@@ -108,17 +108,17 @@ parse_git_commit() {
 
 count_by_git_add() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^[A ][ A]' | wc -l
+    git status -s 2> /dev/null | grep '^[A-Z]' | wc -l
   fi
 }
 count_by_git_mod() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^[M ][ M]' | wc -l
+    git status -s 2> /dev/null | grep '^ [A-Z]' | wc -l
   fi
 }
 count_by_git_del() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^[D ][ D]' | wc -l
+    git status -s 2> /dev/null | grep '^  [A-Z]' | wc -l
   fi
 }
 count_by_git_unt() {
