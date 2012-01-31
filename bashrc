@@ -113,12 +113,12 @@ count_by_git_add() {
 }
 count_by_git_mod() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^ [A-Z]' | wc -l
+    git status -s 2> /dev/null | grep '^.[A-Z]' | wc -l
   fi
 }
 count_by_git_del() {
   if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^  [A-Z]' | wc -l
+    git status -s 2> /dev/null | grep '^.2[A-Z]' | wc -l
   fi
 }
 count_by_git_unt() {
