@@ -3,6 +3,9 @@
     email = gildas.quemener@knplabs.com
 [alias]
     co = checkout
+    wu = log --stat origin..@{0}
+    wup = log -p origin..@{0}
+    up = pull --rebase
 [color]
     ui = true
 [color "status"]
@@ -10,4 +13,4 @@
     changed = yellow
     untracked = red
 [core]
-	excludesfile = ~/.cvsignore
+    excludesfile = ~/.cvsignore
