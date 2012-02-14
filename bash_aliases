@@ -22,6 +22,3 @@ alias sf="./app/console"
 alias sft="./app/console --env=test"
 alias sfb="./app/console --env=test behat"
 alias sfu="phpunit -c app"
-
-alias psf="find -name *.swp -print && find -name *.*~ -print"
-alias csf="find -name *.swp -print -delete && find -name *.*~ -print -delete"

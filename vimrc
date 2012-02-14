@@ -33,7 +33,7 @@ set title                         " Set the terminal's title
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set noswapfile
 
 set tabstop=4                    " Global tab width.
 set softtabstop=4
