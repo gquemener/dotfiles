@@ -61,3 +61,5 @@ let g:PowerLine_cache_file="/tmp/powerline.cache"
 
 "snipMate
 let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
+
+cabbrev bda bufdo bd<cr>
