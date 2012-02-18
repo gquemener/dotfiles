@@ -25,3 +25,5 @@ alias sfu="phpunit -c app"
 
 alias psf="find -name *.swp -print && find -name *.*~ -print"
 alias csf="find -name *.swp -print -delete && find -name *.*~ -print -delete"
+
+alias steam="WINEDEBUG=-all wine64 /media/DATA/Program\ Files/Steam/Steam.exe > /dev/null 2>&1 &"
