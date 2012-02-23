@@ -64,3 +64,9 @@ let g:PowerLine_cache_file="/tmp/powerline.cache"
 let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
 
 cabbrev bda bufdo bd<cr>
+
+inoremap jj      <esc>
+inoremap <up>    <nop>
+inoremap <down> <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
