@@ -63,10 +63,23 @@ let g:PowerLine_cache_file="/tmp/powerline.cache"
 "snipMate
 let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
 
+"behat
+let feature_filetype='behat'
+
 cabbrev bda bufdo bd<cr>
 
 inoremap jj      <esc>
 inoremap <up>    <nop>
-inoremap <down> <nop>
+inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
+inoremap <esc>   <nop>
+
+nmap <leader><tab><tab> :Tab /
+vmap <leader><tab> :Tab /
+nmap <leader><tab>= :Tab /=<cr>
+vmap <leader><tab>= :Tab /=<cr>
+nmap <leader><tab>: :Tab /:\zs<cr>
+vmap <leader><tab>: :Tab /:\zs<cr>
+nmap <leader><tab>> :Tab /=><cr>
+vmap <leader><tab>> :Tab /=><cr>
