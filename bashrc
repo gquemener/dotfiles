@@ -129,3 +129,5 @@ count_by_git_unt() {
 
 export PS1="\[\033[0;33m\]{\$(date +%H:%M)} \$(parse_git_branch) \$(parse_git_commit) \$(count_by_git_add).\$(count_by_git_mod).\$(count_by_git_del).\$(count_by_git_unt) [\w] \[\033[0;37m\]"
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

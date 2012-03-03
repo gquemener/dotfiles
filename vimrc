@@ -15,7 +15,8 @@ set hidden                        " Handle multiple buffers better.
 
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
-set wildignore=*/.git/*,*/cache/*,*.swp
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.pyo,*.log,**/cache/**,**/logs/**,**/zend/**,**/vendor/**/vendor/**,web/css,web/js,web/bundles,*/project/*,*/target/*,*.hi
+
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
@@ -33,7 +34,7 @@ set title                         " Set the terminal's title
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set noswapfile
 
 set tabstop=4                    " Global tab width.
 set softtabstop=4
@@ -61,3 +62,5 @@ let g:PowerLine_cache_file="/tmp/powerline.cache"
 
 "snipMate
 let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
+
+cabbrev bda bufdo bd<cr>

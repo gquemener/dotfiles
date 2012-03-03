@@ -1,0 +1,15 @@
+# var_dump(...);die;
+snippet dvd
+	var_dump(${1:name});die;
+
+snippet g
+	public function get${1:Attribute}()
+	{
+		return $this->${2:attribute};
+	}
+
+snippet s
+	public function set${1:Attribute}(${2:type} $${3:attribute})
+	{
+		$this->$3 = $$3;
+	}
