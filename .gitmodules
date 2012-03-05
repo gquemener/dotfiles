@@ -28,3 +28,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/behat"]
+	path = bundle/behat
+	url = https://github.com/veloce/vim-behat.git
