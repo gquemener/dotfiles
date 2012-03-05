@@ -31,3 +31,6 @@
 [submodule "bundle/behat"]
 	path = bundle/behat
 	url = https://github.com/veloce/vim-behat.git
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = https://github.com/sjbach/lusty.git
