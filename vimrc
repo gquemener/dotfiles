@@ -66,6 +66,11 @@ let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
 "behat
 let feature_filetype='behat'
 
+"Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['ruby', 'php'],
+                           \ 'passive_filetypes': ['css', 'scss'] }
+
 cabbrev bda bufdo bd<cr>
 
 inoremap jj      <esc>
