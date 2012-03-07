@@ -100,17 +100,12 @@ parse_git_branch() {
   fi
 }
 parse_git_commit() {
-  if [ -d ".git" ]; then
-    git log -1 --oneline 2> /dev/null | awk '{print substr($1,0,10)}'
-  fi
+    if [ -d ".git" ]; then
+        git log -1 --oneline 2> /dev/null | awk '{print substr($1,0,10)}'
+    fi
 }
 
-if [ $(git status --porcelain | wc -l) -eq 0 ];
-then
-    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
-else
-    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 3)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
-fi
+export PS1="\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \$\\[$(tput sgr0)\\] "
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
