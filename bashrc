@@ -1,4 +1,3 @@
-export EDITOR="gvim"
 PATH="$PATH;/home/gildas/bin"
 
 # If not running interactively, don't do anything
@@ -102,32 +101,16 @@ parse_git_branch() {
 }
 parse_git_commit() {
   if [ -d ".git" ]; then
-    git log -1 2> /dev/null | grep 'commit' | awk '{print substr($2,1,10)}'
+    git log -1 --oneline 2> /dev/null | awk '{print substr($1,0,10)}'
   fi
 }
 
-count_by_git_add() {
-  if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^[A-Z]' | wc -l
-  fi
-}
-count_by_git_mod() {
-  if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^.[A-Z]' | wc -l
-  fi
-}
-count_by_git_del() {
-  if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^.2[A-Z]' | wc -l
-  fi
-}
-count_by_git_unt() {
-  if [ -d ".git" ]; then
-    git status -s 2> /dev/null | grep '^??' | wc -l
-  fi
-}
-
-export PS1="\[\033[0;33m\]{\$(date +%H:%M)} \$(parse_git_branch) \$(parse_git_commit) \$(count_by_git_add).\$(count_by_git_mod).\$(count_by_git_del).\$(count_by_git_unt) [\w] \[\033[0;37m\]"
+if [ $(git status --porcelain | wc -l) -eq 0 ];
+then
+    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 0)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
+else
+    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 3)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
+fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
