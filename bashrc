@@ -107,7 +107,7 @@ parse_git_commit() {
 
 if [ $(git status --porcelain | wc -l) -eq 0 ];
 then
-    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 0)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
+    export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
 else
     export PS1="\\[$(tput setaf 4)\\]\A \\[$(tput setaf 3)\\]\$(parse_git_branch) \$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \\[$(tput sgr0)\\]\$ "
 fi
