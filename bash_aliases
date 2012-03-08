@@ -7,7 +7,7 @@ alias lk='ls -lSr --color'  #sort by size, biggest last
 
 #git aliases
 alias g='git'
-alias s='git status'
+alias s='git status -uall'
 alias g='git push'
 alias gd='git diff'
 alias gc='git commit -v'
