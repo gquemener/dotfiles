@@ -1,9 +1,19 @@
 #!/bin/bash
 
-GREEN="\\033[0;32m"
-NORMAL="\\033[0;39m"
+tput clear
+tput cup 3 15
 
+tput setaf 3
+echo "DOT FILES INSTALLATION"
+
+tput setaf 2
+echo "> Updating git submodule..."
+tput setaf 4
 git submodule update --init 
+
+tput setaf 2
+echo "> Creating dotfiles links..."
+tput setaf 4
 ln -nfs ~/bin/dotfiles/bashrc ~/.bashrc
 ln -nfs ~/bin/dotfiles/bash_aliases ~/.bash_aliases
 ln -nfs ~/bin/dotfiles/vimrc ~/.vimrc
@@ -11,8 +21,14 @@ ln -nfs ~/bin/dotfiles ~/.vim
 ln -nfs ~/bin/dotfiles/fonts ~/.fonts
 ln -nfs ~/bin/dotfiles/gitconfig ~/.gitconfig
 
+tput setaf 2
+echo "> Reloading bashrc..."
+tput setaf 4
 . bashrc
+
+tput setaf 2
+echo "> Clearing font cache..."
+tput setaf 4
 fc-cache -vf
 
-echo -e "$GREEN" "Installed Plugin:" "$NORMAL"
-git submodule
+notify-send "Dot Files installation result" "$(git submodule | wc -l) bundles installed successfully: $(git submodule)" -i /usr/share/pixmaps/apple-green.png
