@@ -29,7 +29,7 @@ parse_git_commit() {
     fi
 }
 
-export PS1="\n\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch)/\$(parse_git_commit) \\[$(tput setaf 6)\\]\\u@\\h:\\w \$ \\[$(tput sgr0)\\]\n ↳ "
+export PS1="\n\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch)/\$(parse_git_commit)\\[$(tput setaf 6)\\] \\u@\\h:\\w \$ \\[$(tput sgr0)\\]\n ↳ "
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
