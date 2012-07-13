@@ -74,11 +74,12 @@ let g:syntastic_mode_map = { 'mode': 'active',
 cabbrev bda bufdo bd<cr>
 
 inoremap jj      <esc>
+inoremap kk      \
 inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
-inoremap <esc>   <nop>
+"inoremap <esc>   <nop>
 
 nmap <leader><tab><tab> :Tab /
 vmap <leader><tab> :Tab /
@@ -90,3 +91,26 @@ nmap <leader><tab>> :Tab /=><cr>
 vmap <leader><tab>> :Tab /=><cr>
 
 nmap <leader>r :CommandTFlush<cr>
+
+imap <C-space> <C-X><C-O>
+
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" automatically remove trailing whitespace before write
+function! StripTrailingWhitespace()
+  normal mZ
+  %s/\s\+$//e
+  if line("'Z") != line(".")
+    echo "Stripped whitespace\n"
+  endif
+  normal `Z
+endfunction
+
+map <F2> :call StripTrailingWhitespace()<CR>
+map! <F2> :call StripTrailingWhitespace()<CR>

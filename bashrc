@@ -1,4 +1,4 @@
-PATH="$PATH;/home/gildas/bin"
+PATH="$PATH:/home/gildas/bin"
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
@@ -33,3 +33,5 @@ export PS1="\n\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput seta
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+setxkbmap -layout fr
