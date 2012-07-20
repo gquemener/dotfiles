@@ -56,6 +56,12 @@ colorscheme vivify
 let mapleader=","
 map <leader>u :call PhpInsertUse()<cr>
 
+" Open the method definition
+map <leader>o <C-]>
+
+" Go back to the method call
+map <leader>p <C-t>
+
 "PowerLine
 let g:Powerline_symbols = 'fancy'
 let g:PowerLine_cache_file="/tmp/powerline.cache"
@@ -80,6 +86,9 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 "inoremap <esc>   <nop>
+
+map <F1> <Esc>
+imap <F1> <Esc>
 
 nmap <leader><tab><tab> :Tab /
 vmap <leader><tab> :Tab /

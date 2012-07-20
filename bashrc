@@ -8,6 +8,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 export PROMPT_COMMAND='history -a'
+export EDITOR=vim
 
 
 if [ -f ~/.bash_aliases ]; then
