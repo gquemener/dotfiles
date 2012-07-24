@@ -9,6 +9,7 @@ shopt -s checkwinsize
 
 export PROMPT_COMMAND='history -a'
 export EDITOR=vim
+export PAGER=less
 
 
 if [ -f ~/.bash_aliases ]; then
