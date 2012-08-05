@@ -40,7 +40,7 @@ hi Todo 		guifg=#8f8f8f gui=italic
 hi Constant 	guifg=#e5786d gui=none
 hi String 		guifg=#95e454 gui=italic
 hi Identifier 	guifg=#cae682 gui=none
-hi Function 	guifg=#cae682 gui=none
+hi Function 	guifg=#ffcc00 gui=none
 hi Type 		guifg=#cae682 gui=none
 hi Statement 	guifg=#8ac6f2 gui=none
 hi Keyword		guifg=#8ac6f2 gui=none
