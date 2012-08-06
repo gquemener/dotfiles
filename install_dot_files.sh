@@ -20,6 +20,7 @@ ln -nfs ~/bin/dotfiles/vimrc ~/.vimrc
 ln -nfs ~/bin/dotfiles ~/.vim
 ln -nfs ~/bin/dotfiles/fonts ~/.fonts
 ln -nfs ~/bin/dotfiles/gitconfig ~/.gitconfig
+ln -nfs ~/bin/dotfiles/gitignore_global ~/.gitignore_global
 ln -nfs ~/bin/dotfiles/psqlrc ~/.psqlrc
 
 tput setaf 2
