@@ -37,4 +37,8 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Client specific files
+#######################
+phpunit.xml
 tags
