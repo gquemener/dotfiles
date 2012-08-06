@@ -15,6 +15,6 @@
     changed = yellow
     untracked = red
 [core]
-    excludesfile = ~/.cvsignore
+	excludesfile = ~/.gitignore_global
 [github]
 	user = gquemener
