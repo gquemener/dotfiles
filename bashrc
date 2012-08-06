@@ -1,4 +1,4 @@
-PATH="$PATH:/home/gildas/bin"
+PATH="$PATH:$HOME/bin:$HOME/.rvm/bin"
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
@@ -10,7 +10,7 @@ shopt -s checkwinsize
 export PROMPT_COMMAND='history -a'
 export EDITOR=vim
 export PAGER=less
-
+export BROWSER=chromium
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -33,7 +33,6 @@ parse_git_commit() {
 
 export PS1="\n\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput setaf 2)\\]\$(parse_git_branch)/\$(parse_git_commit)\\[$(tput setaf 6)\\] \\u@\\h:\\w \$ \\[$(tput sgr0)\\]\n ↳ "
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 setxkbmap -layout fr

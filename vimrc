@@ -17,7 +17,6 @@ set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.pyo,*.log,**/cache/**,**/logs/**,**/zend/**,**/vendor/**/vendor/**,web/css,web/js,web/bundles,*/project/*,*/target/*,*.hi
 
-
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
@@ -44,8 +43,10 @@ set autoindent
 set smartindent
 set nolist
 
+set cursorline
+
 if has('gui_running')
-    set guifont=Monaco\ for\ Powerline\ 10  " set fonts for gui vim
+    set guifont=Inconsolata\ 12
     set guioptions=egmrt
 endif
 
@@ -55,9 +56,6 @@ colorscheme wombat
 
 let mapleader=","
 map <leader>u :call PhpInsertUse()<cr>
-
-" Open the method definition
-map <leader>o <C-]>
 
 " Go back to the method call
 map <leader>p <C-t>
@@ -123,3 +121,10 @@ endfunction
 
 map <F2> :call StripTrailingWhitespace()<CR>
 map! <F2> :call StripTrailingWhitespace()<CR>
+
+" do a Ack search on the word under cursor
+nmap <leader>f :Ack <C-r><C-w><CR>
+" do a Ack search on the selected text
+vmap <leader>f y:Ack <C-r>"<CR>
+" search on php.net for current word
+command! Browse : ! $BROWSER php.net/<cword>

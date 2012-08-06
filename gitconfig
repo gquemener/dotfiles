@@ -3,9 +3,6 @@
 	email = gildas.quemener@knplabs.com
 [alias]
     co = checkout
-    wu = log --stat origin..@{0}
-    wup = log -p origin..@{0}
-    up = pull --rebase
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	st = status
 [color]
