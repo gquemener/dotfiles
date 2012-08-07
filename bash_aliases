@@ -24,6 +24,7 @@ alias sfu="phpunit -c app"
 
 alias steam="WINEDEBUG=-all wine64 /media/DATA/Program\ Files/Steam/Steam.exe > /dev/null 2>&1 &"
 
+alias uv="UBUNTU_MENUPROXY= gvim"
 alias v="gvim"
 
 export PATH=$HOME/local/bin:$PATH

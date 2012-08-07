@@ -42,3 +42,4 @@ Thumbs.db
 #######################
 phpunit.xml
 tags
+ig/*
