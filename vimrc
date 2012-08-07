@@ -72,8 +72,8 @@ let feature_filetype='behat'
 
 "Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['ruby', 'php'],
-                           \ 'passive_filetypes': ['css', 'scss'] }
+            \ 'active_filetypes': ['ruby', 'php'],
+            \ 'passive_filetypes': ['css', 'scss'] }
 
 cabbrev bda bufdo bd<cr>
 
@@ -85,7 +85,6 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 "inoremap <esc>   <nop>
 
-map <F1> <Esc>
 imap <F1> <Esc>
 
 nmap <leader><tab><tab> :Tab /
@@ -111,20 +110,34 @@ autocmd BufWinLeave * call clearmatches()
 
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
-  normal mZ
-  %s/\s\+$//e
-  if line("'Z") != line(".")
-    echo "Stripped whitespace\n"
-  endif
-  normal `Z
+    normal mZ
+    %s/\s\+$//e
+    if line("'Z") != line(".")
+        echo "Stripped whitespace\n"
+    endif
+    normal `Z
 endfunction
 
-map <F2> :call StripTrailingWhitespace()<CR>
-map! <F2> :call StripTrailingWhitespace()<CR>
+map <F3> :call StripTrailingWhitespace()<CR>
+map! <F3> :call StripTrailingWhitespace()<CR>
 
 " do a Ack search on the word under cursor
 nmap <leader>f :Ack <C-r><C-w><CR>
 " do a Ack search on the selected text
 vmap <leader>f y:Ack <C-r>"<CR>
+
 " search on php.net for current word
 command! Browse : ! $BROWSER php.net/<cword>
+
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+        Tabularize/|/l1
+        normal! 0
+        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+endfunction
