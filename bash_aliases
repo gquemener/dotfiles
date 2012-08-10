@@ -8,9 +8,9 @@ alias lk='ls -lSr --color'  #sort by size, biggest last
 #git aliases
 alias g='git'
 alias s='git status -uall'
-alias g='git push'
+alias gp='git pull'
+alias gph='git push'
 alias gd='git diff'
-alias gc='git commit -v'
 alias gco='git checkout'
 
 #some more aliases :)
@@ -21,8 +21,7 @@ alias sf="./app/console"
 alias sft="./app/console --env=test"
 alias sfb="./app/console --env=test behat"
 alias sfu="phpunit -c app"
-
-alias steam="WINEDEBUG=-all wine64 /media/DATA/Program\ Files/Steam/Steam.exe > /dev/null 2>&1 &"
+alias sfs="clear && php -S localhost:8000 -t web/"
 
 alias uv="UBUNTU_MENUPROXY= gvim"
 alias v="gvim"

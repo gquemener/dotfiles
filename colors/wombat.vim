@@ -47,5 +47,4 @@ hi Keyword		guifg=#8ac6f2 gui=none
 hi PreProc 		guifg=#e5786d gui=none
 hi Number		guifg=#e5786d gui=none
 hi Special		guifg=#e7f6da gui=none
-
-
+hi Search       guibg=#add8e6 gui=none

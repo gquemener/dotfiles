@@ -46,7 +46,7 @@ set nolist
 set cursorline
 
 if has('gui_running')
-    set guifont=Inconsolata\ 12
+    set guifont=Inconsolata\ 11
     set guioptions=egmrt
 endif
 
