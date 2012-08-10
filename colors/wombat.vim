@@ -48,3 +48,4 @@ hi PreProc 		guifg=#e5786d gui=none
 hi Number		guifg=#e5786d gui=none
 hi Special		guifg=#e7f6da gui=none
 hi Search       guibg=#add8e6 gui=none
+hi XmlEndTag    guifg=#ffcc00 gui=none
