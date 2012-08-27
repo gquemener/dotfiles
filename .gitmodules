@@ -40,3 +40,6 @@
 [submodule "bundle/Rename"]
 	path = bundle/Rename
 	url = git://github.com/vim-scripts/Rename.git
+[submodule "bundle/phpunit"]
+	path = bundle/phpunit
+	url = git://github.com/vim-scripts/phpunit.git

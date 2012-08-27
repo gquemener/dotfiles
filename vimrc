@@ -45,6 +45,10 @@ set nolist
 
 set cursorline
 
+set tags=tags,vendor.tags,pear.tags
+
+set completeopt=menuone
+
 if has('gui_running')
     set guifont=Inconsolata\ 11
     set guioptions=egmrt

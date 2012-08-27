@@ -42,4 +42,7 @@ Thumbs.db
 #######################
 phpunit.xml
 tags
-ig/*
+pear.tags
+vendor.tags
+code_coverage/*
+Guardfile
