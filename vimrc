@@ -154,3 +154,11 @@ function! s:align()
         call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
     endif
 endfunction
+
+autocmd BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
+
+function! <SID>MkdirsIfNotExists(directory)
+    if(!isdirectory(a:directory))
+        call system('mkdir -p '.shellescape(a:directory))
+    endif
+endfunction
