@@ -9,13 +9,17 @@ alias lk='ls -lSr --color'  #sort by size, biggest last
 alias g='git'
 alias s='git status -uall'
 alias gp='git pull'
+alias gpr='git pull --rebase'
 alias gph='git push'
 alias gd='git diff'
 alias gco='git checkout'
+alias gc='git commit'
 
 #some more aliases :)
 alias md='mkdir -p'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+alias tsf="teamocil --here sf"
 
 alias sf="./app/console"
 alias sft="./app/console --env=test"

@@ -50,7 +50,7 @@ set tags=tags,vendor.tags,pear.tags
 set completeopt=menuone
 
 if has('gui_running')
-    set guifont=Inconsolata\ 11
+    set guifont=Inconsolata\ 14
     set guioptions=egmrt
 endif
 
@@ -100,10 +100,6 @@ vmap <leader><tab>: :Tab /:\zs<cr>
 nmap <leader><tab>> :Tab /=><cr>
 vmap <leader><tab>> :Tab /=><cr>
 
-nmap <leader>r :CommandTFlush<cr>
-
-imap <C-space> <C-X><C-O>
-
 " Highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -130,17 +126,10 @@ nmap <leader>f :Ack <C-r><C-w><CR>
 " do a Ack search on the selected text
 vmap <leader>f y:Ack <C-r>"<CR>
 
+let g:ctrlp_cmd = 'CtrlPMRU'
+
 " search on php.net for current word
 command! Browse : ! $BROWSER php.net/<cword>
-
-" Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 

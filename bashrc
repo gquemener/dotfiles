@@ -11,6 +11,7 @@ export PROMPT_COMMAND='history -a'
 export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
+export LANG=fr_FR.UTF-8
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
