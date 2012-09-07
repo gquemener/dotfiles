@@ -15,3 +15,5 @@
 	excludesfile = ~/.gitignore_global
 [github]
 	user = gquemener
+[web]
+	browser = chromium
