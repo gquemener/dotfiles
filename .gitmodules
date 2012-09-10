@@ -43,3 +43,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "bundle/xml"]
+	path = bundle/xml
+	url = git://github.com/othree/xml.vim.git
