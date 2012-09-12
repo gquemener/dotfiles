@@ -127,6 +127,7 @@ nmap <leader>f :Ack <C-r><C-w><CR>
 vmap <leader>f y:Ack <C-r>"<CR>
 
 let g:ctrlp_cmd = 'CtrlPMRU'
+map <leader>lp :LustyJugglePrevious<cr>
 
 " search on php.net for current word
 command! Browse : ! $BROWSER php.net/<cword>
