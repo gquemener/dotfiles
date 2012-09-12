@@ -15,6 +15,7 @@ tput setaf 2
 echo "> Creating dotfiles links..."
 tput setaf 4
 ln -nfs ~/bin/dotfiles/bashrc ~/.bashrc
+ln -nfs ~/bin/dotfiles/zshrc ~/.zshrc
 ln -nfs ~/bin/dotfiles/bash_aliases ~/.bash_aliases
 ln -nfs ~/bin/dotfiles/vimrc ~/.vimrc
 ln -nfs ~/bin/dotfiles ~/.vim

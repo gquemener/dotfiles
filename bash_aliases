@@ -29,5 +29,3 @@ alias sfs="clear && php -S localhost:8000 -t web/"
 
 alias uv="UBUNTU_MENUPROXY= gvim"
 alias v="gvim"
-
-export PATH=$HOME/local/bin:$PATH
