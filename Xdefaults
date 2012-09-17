@@ -1,9 +1,9 @@
-URxvt*background          : #ffffff
-URxvt*foreground          : #A8A8A8
+URxvt*background          : #222222
+URxvt*foreground          : #ffffff
 URxvt*scrollBar_right     : false
 URxvt*scrollBar           : false
 URxvt*borderLess          : false
-URxvt*transparent         : true
+URxvt*transparent         : false
 URxvt*shading             : 10
 URxvt*tint                : white
 XTerm*scrollTtyOutput     : false
@@ -23,7 +23,7 @@ URxvt.color0              : #000000
 URxvt.color8              : #555555
 ! red
 URxvt.color1              : #AA0000
-URxvt.color9              : #FF5555
+URxvt.color9              : #ef2929
 ! green
 URxvt.color2              : #00AA00
 URxvt.color10             : #55FF55
@@ -32,21 +32,17 @@ URxvt.color3              : #AA5500
 URxvt.color11             : #FFFF55
 ! blue
 URxvt.color4              : #0000AA
-URxvt.color12             : #5555FF
+URxvt.color12             : #23b7eb
 ! magenta
 URxvt.color5              : #AA00AA
 URxvt.color13             : #FF55FF
 ! cyan
 URxvt.color6              : #00AAAA
-URxvt.color14             : #55FFFF
+URxvt.color14             : #27e7e7
 ! white
 URxvt.color7              : #AAAAAA
 
-URxvt*font:                 xft:Monaco for Powerline:regular:size=12
-URxvt*imFont:               xft:Monaco for Powerline:regular:size=12
-URxvt*boldFont:             xft:Monaco for Powerline:bold:size=12
-URxvt*italicFont:           xft:Monaco for Powerline:italic:size=12
-URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=12
+URxvt*font:                 xft:Inconsolata:regular:size=14
 
 URxvt.perl-ext-common     : default,matcher
 URxvt.urlLauncher         : chromium
