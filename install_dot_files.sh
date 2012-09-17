@@ -24,6 +24,7 @@ ln -nfs ~/bin/dotfiles/gitconfig ~/.gitconfig
 ln -nfs ~/bin/dotfiles/gitignore_global ~/.gitignore_global
 ln -nfs ~/bin/dotfiles/psqlrc ~/.psqlrc
 ln -nfs ~/bin/dotfiles/Xdefaults ~/.Xdefaults
+ln -nfs ~/bin/dotfiles/toprc ~/.toprc
 
 tput setaf 2
 echo "> Reloading bashrc..."
