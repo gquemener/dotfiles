@@ -121,10 +121,10 @@ endfunction
 map <F3> :call StripTrailingWhitespace()<CR>
 map! <F3> :call StripTrailingWhitespace()<CR>
 
-" do a Ack search on the word under cursor
-nmap <leader>f :Ack <C-r><C-w><CR>
-" do a Ack search on the selected text
-vmap <leader>f y:Ack <C-r>"<CR>
+" do a grep search on the word under cursor
+nmap <leader>f :grep -Rno "<C-r><C-w>"
+" do a grep search on the selected text
+vmap <leader>f y:grep -Rno "<C-r>"
 
 let g:ctrlp_cmd = 'CtrlPMRU'
 map <leader>lp :LustyJugglePrevious<cr>
