@@ -9,7 +9,7 @@ echo "DOT FILES INSTALLATION"
 tput setaf 2
 echo "> Updating git submodule..."
 tput setaf 4
-git submodule update --init 
+git submodule update --init
 
 tput setaf 2
 echo "> Creating dotfiles links..."
@@ -25,6 +25,8 @@ ln -nfs ~/bin/dotfiles/gitignore_global ~/.gitignore_global
 ln -nfs ~/bin/dotfiles/psqlrc ~/.psqlrc
 ln -nfs ~/bin/dotfiles/Xdefaults ~/.Xdefaults
 ln -nfs ~/bin/dotfiles/toprc ~/.toprc
+ln -nfs ~/bin/dotfiles/tmux.conf ~/.tmux.conf
+ln -nfs ~/bin/dotfiles/teamocil ~/.teamocil
 
 tput setaf 2
 echo "> Reloading bashrc..."
