@@ -42,6 +42,7 @@ set expandtab                    " Use spaces instead of tabs
 set autoindent
 set smartindent
 set nolist
+set mouse=n
 
 set cursorline
 
