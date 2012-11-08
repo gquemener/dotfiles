@@ -17,3 +17,5 @@
 	user = gquemener
 [web]
 	browser = chromium
+[push]
+	default = current
