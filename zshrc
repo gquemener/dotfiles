@@ -7,6 +7,7 @@ source $HOME/.bash_aliases
 
 autoload -U compinit
 compinit -i
+
 # ls colors
 autoload colors; colors;
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
