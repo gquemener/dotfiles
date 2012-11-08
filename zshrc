@@ -5,6 +5,10 @@ export LANG=fr_FR.UTF-8
 
 source $HOME/.bash_aliases
 
+export HISTFILE=~/.zsh_history
+export HISTSIZE=500000
+export SAVEHIST=500000
+
 autoload -U compinit
 compinit -i
 
@@ -24,6 +28,27 @@ fi
 setopt auto_cd
 setopt multios
 setopt cdablevarS
+setopt histignorealldups
+setopt autocd
+setopt autopushd pushdminus pushdsilent pushdtohome pushdignoredups
+setopt pushdignoredups
+setopt nohup
+setopt extendedglob
+setopt completeinword
+setopt promptsubst
+setopt globdots
+setopt histreduceblanks
+setopt histignorespace
+setopt SH_WORD_SPLIT
+setopt automenu
+setopt cdablevars
+setopt nohup
+setopt listpacked
+setopt nolisttypes
+setopt extendedglob
+setopt completeinword
+setopt alwaystoend
+setopt correct
 
 if [[ x$WINDOW != x ]]
 then
