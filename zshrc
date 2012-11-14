@@ -189,4 +189,4 @@ export PATH=/home/gildas/local/bin:/home/gildas/local/bin:/home/gildas/.rvm/gems
 
 [ -z "$TMUX" ] || export TERM=xterm-256color
 [ ! -d ~/projects ] && mkdir ~/projects
-cd ~/projects
+[ -z "$TMUX" ] && cd ~/projects
