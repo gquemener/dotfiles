@@ -188,3 +188,5 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 export PATH=/home/gildas/local/bin:/home/gildas/local/bin:/home/gildas/.rvm/gems/ruby-1.9.3-p194/bin:/home/gildas/.rvm/gems/ruby-1.9.3-p194@global/bin:/home/gildas/.rvm/rubies/ruby-1.9.3-p194/bin:/home/gildas/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin
 
 [ -z "$TMUX" ] || export TERM=xterm-256color
+[ ! -d ~/projects ] && mkdir ~/projects
+cd ~/projects
