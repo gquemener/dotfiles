@@ -79,7 +79,7 @@ let feature_filetype='behat'
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': ['ruby', 'php'],
             \ 'passive_filetypes': ['css', 'scss'] }
-let g:syntastic_phpcs_conf=" --standard=PSR2 --extensions=php"
+let g:syntastic_phpcs_conf=" --standard=Symfony2 --extensions=php"
 
 
 cabbrev bda bufdo bd<cr>

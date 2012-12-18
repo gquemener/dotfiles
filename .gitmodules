@@ -52,3 +52,6 @@
 [submodule "bundle/phpspec"]
 	path = bundle/phpspec
 	url = git://github.com/Herzult/phpspec-vim.git
+[submodule "bundle/markdown-folding"]
+	path = bundle/markdown-folding
+	url = git://github.com/nelstrom/vim-markdown-folding.git
