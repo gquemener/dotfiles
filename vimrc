@@ -35,9 +35,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set noswapfile
 
-set tabstop=4                    " Global tab width.
-set softtabstop=4
-set shiftwidth=4                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 set autoindent
 set smartindent
@@ -51,7 +48,7 @@ set tags=tags,vendor.tags,pear.tags
 set completeopt=menuone
 
 if has('gui_running')
-    set guifont=Inconsolata\ 14
+    set guifont=Inconsolata\ 11
     set guioptions=egmrt
 endif
 
@@ -102,6 +99,13 @@ nmap <leader><tab>: :Tab /:\zs<cr>
 vmap <leader><tab>: :Tab /:\zs<cr>
 nmap <leader><tab>> :Tab /=><cr>
 vmap <leader><tab>> :Tab /=><cr>
+
+autocmd FileType * set tabstop=4
+autocmd FileType * set softtabstop=4
+autocmd FileType * set shiftwidth=4
+autocmd FileType behat set tabstop=2
+autocmd FileType behat set softtabstop=2
+autocmd FileType behat set shiftwidth=2
 
 " Highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red

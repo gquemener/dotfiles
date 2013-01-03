@@ -1,7 +1,7 @@
 export EDITOR=vim
 export PAGER=less
-export BROWSER=chromium
-export LANG=fr_FR.UTF-8
+export BROWSER=chromium-browser
+export LANG=en_US.UTF-8
 
 source $HOME/.bash_aliases
 
