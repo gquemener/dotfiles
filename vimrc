@@ -99,6 +99,8 @@ nmap <leader><tab>: :Tab /:\zs<cr>
 vmap <leader><tab>: :Tab /:\zs<cr>
 nmap <leader><tab>> :Tab /=><cr>
 vmap <leader><tab>> :Tab /=><cr>
+nmap <leader><tab>$ :Tab /$.*<cr>
+vmap <leader><tab>$ :Tab /$.*<cr>
 
 autocmd FileType * set tabstop=4
 autocmd FileType * set softtabstop=4
