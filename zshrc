@@ -2,6 +2,7 @@ export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium-browser
 export LANG=en_US.UTF-8
+export PATH=./bin:./vendor/bin:$PATH
 
 source $HOME/.bash_aliases
 

@@ -22,8 +22,8 @@ alias md='mkdir -p'
 alias tsf="teamocil --here sf"
 
 alias sf="./app/console"
-alias sft="./bin/phpspec run -fpretty"
-alias sfb="./bin/behat --no-paths"
+alias sft="phpspec run -fpretty"
+alias sfb="behat --no-paths"
 alias sfu="phpunit -c app"
 alias sfs="clear && php -S localhost:8000 -t web/"
 
