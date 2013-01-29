@@ -1,4 +1,4 @@
-PATH="$PATH:$HOME/bin:$HOME/.rvm/bin"
+PATH="./bin:./vendor/bin:$HOME/bin:$HOME/.rvm/bin:$PATH"
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000

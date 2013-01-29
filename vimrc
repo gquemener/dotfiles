@@ -131,9 +131,9 @@ map <F3> :call StripTrailingWhitespace()<CR>
 map! <F3> :call StripTrailingWhitespace()<CR>
 
 " do a grep search on the word under cursor
-nmap <leader>f :grep -Rno "<C-r><C-w>"
+nmap <leader>f :grep -Rn "<C-r><C-w>"
 " do a grep search on the selected text
-vmap <leader>f y:grep -Rno "<C-r>"
+vmap <leader>f y:grep -Rn "<C-r>"
 
 let g:ctrlp_cmd = 'CtrlPMRU'
 map <leader>lp :LustyJugglePrevious<cr>

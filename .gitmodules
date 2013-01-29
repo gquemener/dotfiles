@@ -1,9 +1,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/powerline"]
-	path = bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/php-namespace"]
 	path = bundle/php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace.git
@@ -55,3 +52,6 @@
 [submodule "bundle/markdown-folding"]
 	path = bundle/markdown-folding
 	url = git://github.com/nelstrom/vim-markdown-folding.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = git@github.com:tpope/vim-ragtag.git
