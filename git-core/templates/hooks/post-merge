@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eu
+
+git diff "HEAD@{1}" --name-only | grep composer.lock 2>&1 > /dev/null
+CHANGED=$?
+
+if [ $CHANGED ]; then
+    echo
+    echo -e "\e[41m!!! composer.lock HAS CHANGED !!!\033[0m"
+    echo
+    echo "You should install updates using:"
+    echo "  composer.phar install --dev"
+fi
