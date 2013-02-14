@@ -127,8 +127,8 @@ function! StripTrailingWhitespace()
     normal `Z
 endfunction
 
-map <F3> :call StripTrailingWhitespace()<CR>
-map! <F3> :call StripTrailingWhitespace()<CR>
+map <leader><F3> :call StripTrailingWhitespace()<CR>
+map! <leader><F3> :call StripTrailingWhitespace()<CR>
 
 " do a grep search on the word under cursor
 nmap <leader>f :grep -Rn "<C-r><C-w>"
