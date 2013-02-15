@@ -48,8 +48,8 @@ set tags=tags,vendor.tags,pear.tags
 set completeopt=menuone
 
 if has('gui_running')
-    set guifont=Inconsolata\ 11
-    set guioptions=egmrt
+    set guifont=Inconsolata\ for\ Powerline\ 11
+    set guioptions=eg
 endif
 
 set laststatus=2                  " Show the status line all the time
@@ -161,3 +161,5 @@ function! <SID>MkdirsIfNotExists(directory)
         call system('mkdir -p '.shellescape(a:directory))
     endif
 endfunction
+
+python from powerline.bindings.vim import source_plugin; source_plugin()
