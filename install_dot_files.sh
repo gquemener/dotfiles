@@ -27,6 +27,7 @@ ln -nfs ~/bin/dotfiles/Xdefaults ~/.Xdefaults
 ln -nfs ~/bin/dotfiles/toprc ~/.toprc
 ln -nfs ~/bin/dotfiles/tmux.conf ~/.tmux.conf
 ln -nfs ~/bin/dotfiles/teamocil ~/.teamocil
+ln -nfs ~/bin/dotfiles/config/powerline ~/.config/powerline
 sudo ln -nfs ~/bin/dotfiles/git-core/templates/hooks/post-merge /usr/share/git-core/templates/hooks/post-merge
 
 tput setaf 2

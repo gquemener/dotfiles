@@ -1,0 +1,40 @@
+{
+	"common": {
+		"term_24bit_colors": true,
+		"dividers": {
+			"left": {
+				"hard": "",
+				"soft": ""
+			},
+			"right": {
+				"hard": "",
+				"soft": ""
+			}
+		}
+	},
+	"ext": {
+		"awesome": {
+			"colorscheme": "default",
+			"theme": "default"
+		},
+		"ipython": {
+			"colorscheme": "default",
+			"theme": "default"
+		},
+		"shell": {
+			"colorscheme": "default",
+			"theme": "default"
+		},
+		"tmux": {
+			"colorscheme": "default",
+			"theme": "default"
+		},
+		"vim": {
+			"colorscheme": "default",
+			"theme": "default",
+			"local_themes": {
+				"help": "help"
+			}
+		}
+	}
+}
