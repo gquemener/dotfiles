@@ -1,9 +1,6 @@
 # some more ls aliases
-alias l='ls -Al --color'
-alias ll='ls -lhaS --color'
-alias la='ls -a --color'    #show hidden files
-alias lx='ls -lXB --color'  #sort by extension
-alias lk='ls -lSr --color'  #sort by size, biggest last
+alias l='ls -lh --color'
+alias ll='ls -lha --color'
 
 #git aliases
 alias g='git'
