@@ -27,6 +27,11 @@ alias sfs="clear && php -S localhost:8000 -t web/"
 alias uv="UBUNTU_MENUPROXY= gvim"
 alias v="gvim"
 
+#apt-get aliases
 alias apti="sudo apt-get install"
 alias apts="sudo apt-cache search"
 alias aptu="sudo apt-get update && sudo apt-get upgrade"
+
+#composer aliases
+alias compi="composer.phar install --dev --prefer-dist"
+alias compu="composer.phar update --dev --prefer-dist"
