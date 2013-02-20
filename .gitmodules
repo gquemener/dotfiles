@@ -1,57 +1,60 @@
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/php-namespace"]
-	path = bundle/php-namespace
+[submodule "vim/bundle/php-namespace"]
+	path = vim/bundle/php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace.git
-[submodule "bundle/twig"]
-	path = bundle/twig
+[submodule "vim/bundle/twig"]
+	path = vim/bundle/twig
 	url = https://github.com/beyondwords/vim-twig.git
-[submodule "bundle/symfony"]
-	path = bundle/symfony
+[submodule "vim/bundle/symfony"]
+	path = vim/bundle/symfony
 	url = https://github.com/ludovicbarreca/vim-symfony.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/phpfolding"]
-	path = bundle/phpfolding
+[submodule "vim/bundle/phpfolding"]
+	path = vim/bundle/phpfolding
 	url = https://github.com/vim-scripts/phpfolding.vim.git
-[submodule "bundle/ack"]
-	path = bundle/ack
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
 	url = https://github.com/vim-scripts/ack.vim.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/behat"]
-	path = bundle/behat
+[submodule "vim/bundle/behat"]
+	path = vim/bundle/behat
 	url = https://github.com/veloce/vim-behat.git
-[submodule "bundle/lusty"]
-	path = bundle/lusty
+[submodule "vim/bundle/lusty"]
+	path = vim/bundle/lusty
 	url = https://github.com/sjbach/lusty.git
-[submodule "bundle/hexHighlight"]
-	path = bundle/hexHighlight
+[submodule "vim/bundle/hexHighlight"]
+	path = vim/bundle/hexHighlight
 	url = https://github.com/yurifury/hexHighlight.git
-[submodule "bundle/Rename"]
-	path = bundle/Rename
+[submodule "vim/bundle/Rename"]
+	path = vim/bundle/Rename
 	url = git://github.com/vim-scripts/Rename.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "bundle/markdown"]
-	path = bundle/markdown
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "bundle/phpspec"]
-	path = bundle/phpspec
+[submodule "vim/bundle/phpspec"]
+	path = vim/bundle/phpspec
 	url = git://github.com/Herzult/phpspec-vim.git
-[submodule "bundle/markdown-folding"]
-	path = bundle/markdown-folding
+[submodule "vim/bundle/markdown-folding"]
+	path = vim/bundle/markdown-folding
 	url = git://github.com/nelstrom/vim-markdown-folding.git
-[submodule "bundle/ragtag"]
-	path = bundle/ragtag
+[submodule "vim/bundle/ragtag"]
+	path = vim/bundle/ragtag
 	url = git@github.com:tpope/vim-ragtag.git
-[submodule "bundle/vdebug"]
-	path = bundle/vdebug
+[submodule "vim/bundle/vdebug"]
+	path = vim/bundle/vdebug
 	url = git://github.com/joonty/vdebug.git
+[submodule "vim/bundle/puppet"]
+	path = vim/bundle/puppet
+	url = git://github.com/rodjek/vim-puppet.git
