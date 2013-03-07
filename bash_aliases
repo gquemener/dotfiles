@@ -24,8 +24,7 @@ alias sfb="behat --no-paths"
 alias sfu="phpunit -c app"
 alias sfs="clear && php -S localhost:8000 -t web/"
 
-alias uv="UBUNTU_MENUPROXY= gvim"
-alias v="gvim"
+alias v="gvim 2>/dev/null"
 
 #apt-get aliases
 alias apti="sudo apt-get install"
