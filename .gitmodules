@@ -61,3 +61,6 @@
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "vim/bundle/HiLinkTrace"]
+	path = vim/bundle/HiLinkTrace
+	url = git@github.com:gerw/vim-HiLinkTrace.git
