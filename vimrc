@@ -54,7 +54,7 @@ endif
 
 set laststatus=2                  " Show the status line all the time
 
-colorscheme wombat
+colorscheme gildasq
 
 let mapleader=","
 map <leader>u :call PhpInsertUse()<cr>
