@@ -45,3 +45,4 @@ pear.tags
 vendor.tags
 code_coverage/*
 Guardfile
+node_modules
