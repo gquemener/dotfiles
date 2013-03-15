@@ -65,18 +65,16 @@ map <leader>p <C-t>
 let g:Powerline_symbols = 'fancy'
 let g:PowerLine_cache_file="/tmp/powerline.cache"
 
-"snipMate
-let g:snips_author = 'Gildas Quéméner <gildas.quemener@gmail.com>'
-
 "behat
 let feature_filetype='behat'
 
 "Syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
+let g:syntastic_mode_map={ 'mode': 'active',
             \ 'active_filetypes': ['ruby', 'php'],
             \ 'passive_filetypes': ['css', 'scss'] }
 let g:syntastic_phpcs_conf=" --standard=Symfony2 --extensions=php"
-
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
 
 cabbrev bda bufdo bd<cr>
 
