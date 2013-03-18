@@ -24,10 +24,13 @@ hi SignColumn           guifg=#666666 ctermfg=241  guibg=#242424 ctermbg=235  gu
 hi CursorLineNr         guifg=#CCCCCC ctermfg=252  guibg=#242424 ctermbg=235  gui=BOLD cterm=BOLD
 hi Delimiter            guifg=#999999 ctermfg=246  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi CursorLine           guifg=NONE    ctermfg=NONE guibg=#333333 ctermbg=236  gui=NONE cterm=NONE
-hi MatchParen           guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
+hi MatchParen           guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
 hi NonText              guifg=#242424 ctermfg=235  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Comment              guifg=#999999 ctermfg=246  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Search               guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE gui=UNDERLINE cterm=UNDERLINE
+hi Identifier           guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Special              guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Constant             guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi qfFileName           guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi qfLineNr             guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi netrwDir             guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
@@ -71,4 +74,11 @@ hi markdownH1           guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gu
 hi markdownH2           guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
 hi markdownH3           guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
 hi markdownHeadingRule  guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
+hi twigVarDelim         guifg=#FFAA00 ctermfg=214  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi twigTagDelim         guifg=#FFAA00 ctermfg=214  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi twigStatement        guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi twigString           guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi htmlString           guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi htmlArg              guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi htmlTagName          guifg=#FFFFFF ctermfg=231  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 

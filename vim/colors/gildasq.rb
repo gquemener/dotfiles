@@ -10,10 +10,13 @@ vim_colors "gildasq" do
     CursorLineNr         "cccccc", "242424", :gui => "bold"
     Delimiter            "999999", "none",   :gui => "none"
     CursorLine           "none",   "333333", :gui => "none"
-    MatchParen           "ffffff", "none",   :gui => "bold"
+    MatchParen           "none",   "none",   :gui => "bold"
     NonText              "242424", "none",   :gui => "none"
     Comment              "999999", "none",   :gui => "none"
     Search               "none",   "none",   :gui => "underline"
+    Identifier           "cae682", "none",   :gui => "none"
+    Special              "8ac6f2", "none",   :gui => "none"
+    Constant             "cae682", "none",   :gui => "none"
 
     # Quickfix
     qfFileName           "95e454", "none",   :gui => "none"
@@ -76,4 +79,15 @@ vim_colors "gildasq" do
     markdownH2           "ffffff", "none",   :gui => "bold"
     markdownH3           "ffffff", "none",   :gui => "bold"
     markdownHeadingRule  "ffffff", "none",   :gui => "bold"
+
+    # Twig
+    twigVarDelim         "ffaa00", "none",   :gui => "none" # {{ }}
+    twigTagDelim         "ffaa00", "none",   :gui => "none" # {% %}
+    twigStatement        "8ac6f2", "none",   :gui => "none"
+    twigString           "95e454", "none",   :gui => "none"
+
+    # HTML
+    htmlString           "95e454", "none",   :gui => "none"
+    htmlArg              "cae682", "none",   :gui => "none"
+    htmlTagName          "ffffff", "none",   :gui => "none"
 end
