@@ -159,4 +159,4 @@ function! <SID>MkdirsIfNotExists(directory)
     endif
 endfunction
 
-python from powerline.bindings.vim import source_plugin; source_plugin()
+set rtp+=/home/gildas/.local/lib/python2.7/site-packages/powerline/bindings/vim

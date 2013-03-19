@@ -1,5 +1,5 @@
 {
-	"name": "Default color scheme for terminal prompts",
+	"name": "Default color scheme for window managers",
 	"groups": {
 		"background:divider": { "fg": "gray5", "bg": "gray0" },
 		"session": { "fg": "black", "bg": "gray10", "attr": ["bold"] },
