@@ -17,6 +17,9 @@ vim_colors "gildasq" do
     Identifier              "cae682", "none",   :gui => "none"
     Special                 "8ac6f2", "none",   :gui => "none"
     Constant                "cae682", "none",   :gui => "none"
+    Directory               "8ac6f2", "none",   :gui => "none"
+    Error                   "95e454", "none",   :gui => "none"
+    Statement               "8ac6f2", "none",   :gui => "none"
 
     # Quickfix
     qfFileName              "95e454", "none",   :gui => "none"

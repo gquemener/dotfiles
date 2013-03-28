@@ -31,6 +31,9 @@ hi Search                  guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE
 hi Identifier              guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Special                 guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Constant                guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Directory               guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Error                   guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Statement               guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi qfFileName              guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi qfLineNr                guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi netrwDir                guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
