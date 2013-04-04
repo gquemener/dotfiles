@@ -1,21 +1,29 @@
 [user]
-	name = Gildas Quéméner
-	email = gildas.quemener@gmail.com
+    name = Gildas Quéméner
+    email = gildas.quemener@gmail.com
 [alias]
     co = checkout
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	st = status --short --branch
 [color]
-    ui = true
+    ui = auto
 [color "status"]
     added = green
     changed = yellow
     untracked = red
 [core]
-	excludesfile = ~/.gitignore_global
-[github]
-	user = gquemener
+    excludesfile = ~/.gitignore_global
+    editor = gvim --nofork
+    pager = cat
 [web]
-	browser = chromium
+    browser = chromium
 [push]
-	default = current
+    default = current
+[mergetool]
+    keepBackup = false
+    keepTemporaries = false
+    prompt = false
+[log]
+    abbrevCommit = true
+[diff]
+    mnemonicPrefix = true
