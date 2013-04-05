@@ -20,6 +20,8 @@ vim_colors "gildasq" do
     Directory               "8ac6f2", "none",   :gui => "none"
     Error                   "95e454", "none",   :gui => "none"
     Statement               "8ac6f2", "none",   :gui => "none"
+    Pmenu                   "none",   "444444", :gui => "none"
+    PmenuSel                "b1d631", "444444", :gui => "bold"
 
     # Quickfix
     qfFileName              "95e454", "none",   :gui => "none"

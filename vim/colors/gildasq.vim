@@ -34,6 +34,8 @@ hi Constant                guifg=#CAE682 ctermfg=186  guibg=NONE    ctermbg=NONE
 hi Directory               guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Error                   guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi Statement               guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi Pmenu                   guifg=NONE    ctermfg=NONE guibg=#444444 ctermbg=238  gui=NONE cterm=NONE
+hi PmenuSel                guifg=#B1D631 ctermfg=149  guibg=#444444 ctermbg=238  gui=BOLD cterm=BOLD
 hi qfFileName              guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi qfLineNr                guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi netrwDir                guifg=#8AC6F2 ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
