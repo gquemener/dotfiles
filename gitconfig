@@ -14,7 +14,6 @@
 [core]
     excludesfile = ~/.gitignore_global
     editor = gvim --nofork
-    pager = cat
 [web]
     browser = chromium
 [push]
