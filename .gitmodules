@@ -61,3 +61,6 @@
 [submodule "vim/bundle/HiLinkTrace"]
 	path = vim/bundle/HiLinkTrace
 	url = git@github.com:gerw/vim-HiLinkTrace.git
+[submodule "vim/bundle/MatchTag"]
+	path = vim/bundle/MatchTag
+	url = https://github.com/gregsexton/MatchTag
