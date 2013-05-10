@@ -1,6 +1,9 @@
 {
+    "minimum-stability": "stable",
     "require": {
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit":           "~3.7",
+        "phpunit/php-code-coverage": "~1.2",
+        "squizlabs/php_codesniffer": "dev-master@dev"
     },
     "config": {
         "bin-dir": "/home/gildas/.local/bin"
