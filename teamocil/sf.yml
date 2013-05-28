@@ -4,7 +4,7 @@ session:
         -
             cmd_separator: "\n"
             with_env_var: false
-            name: shell
+            name: console
             filters:
                 before: clear
             splits:

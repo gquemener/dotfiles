@@ -194,3 +194,4 @@ export PATH=/home/gildas/.local/bin:/home/gildas/bin:/home/gildas/.rvm/gems/ruby
 #repository=`git config remote.origin.url | sed -E 's/git@github.com:(.*).git/\1/g'`
 [ ! -d ~/projects ] && mkdir ~/projects
 [ -z "$TMUX" ] && cd ~/projects
+eval "$(phpenv init -)"

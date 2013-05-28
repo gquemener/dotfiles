@@ -107,6 +107,10 @@ vmap <leader><tab>> :Tab /=><cr>
 nmap <leader><tab>$ :Tab /$.*<cr>
 vmap <leader><tab>$ :Tab /$.*<cr>
 
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr>
+
 autocmd FileType * set tabstop=4
 autocmd FileType * set softtabstop=4
 autocmd FileType * set shiftwidth=4
