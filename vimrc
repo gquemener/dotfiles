@@ -75,9 +75,9 @@ let feature_filetype='behat'
 let g:syntastic_mode_map={ 'mode': 'active',
             \ 'active_filetypes': ['ruby', 'php'],
             \ 'passive_filetypes': ['css', 'scss'] }
-let g:syntastic_php_phpcs_args="--standard=PSR2"
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+let g:syntastic_phpcs_conf="--standard=PSR2"
 
 cabbrev bda bufdo bd<cr>
 
