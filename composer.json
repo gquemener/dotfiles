@@ -3,7 +3,7 @@
     "require": {
         "phpunit/phpunit":           "~3.7",
         "phpunit/php-code-coverage": "~1.2",
-        "squizlabs/php_codesniffer": "dev-master@dev"
+        "squizlabs/php_codesniffer": "~1.4"
     },
     "config": {
         "bin-dir": "/home/gildas/.local/bin"
