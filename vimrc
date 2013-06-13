@@ -44,6 +44,9 @@ set mouse=n
 set cursorline
 
 set tags=tags,vendor.tags,pear.tags
+set cscopetag cst
+set csto=1
+cscope add cscope.out
 
 set completeopt=menuone
 
