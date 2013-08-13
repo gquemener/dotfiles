@@ -37,3 +37,5 @@ alias compu="composer.phar update --dev --prefer-dist"
 
 alias x-on="sudo sed -i -e 's/^;\+//' /etc/php5/conf.d/20-xdebug.ini"
 alias x-off="sudo sed -i -e 's/^/;/' /etc/php5/conf.d/20-xdebug.ini"
+
+alias phpfix="git diff --name-only --cached | xargs -n 1 php ~/.local/bin/php-cs-fixer.phar fix"
