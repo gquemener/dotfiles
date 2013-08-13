@@ -64,3 +64,6 @@
 [submodule "vim/bundle/MatchTag"]
 	path = vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
