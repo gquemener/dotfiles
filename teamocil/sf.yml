@@ -23,6 +23,7 @@ session:
                 -
                     cmd:
                         - 'if [ ! -f pear.tags ]; then ctags -R -f pear.tags /usr/share/pear ; fi'
+                        - 'if [ ! -f local.tags ]; then ctags -R -f local.tags /home/gildas/bin/dotfiles/vendor ; fi'
                         - 'if [ ! -f Guardfile ]; then guard init ctags-composer ; fi'
                         - guard
                     height: 20
