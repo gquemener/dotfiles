@@ -41,8 +41,7 @@ Thumbs.db
 #######################
 phpunit.xml
 tags
-pear.tags
-vendor.tags
+*.tags
 code_coverage/*
 Guardfile
 node_modules
