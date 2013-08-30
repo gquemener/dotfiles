@@ -1,6 +1,43 @@
-call pathogen#infect()
+"
+" Vundle Configuration
+"
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-set nocompatible                  " Must come first because it changes other options.
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'airblade/vim-gitgutter'
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'beyondwords/vim-twig'
+Bundle 'gerw/vim-HiLinkTrace'
+Bundle 'godlygeek/tabular'
+Bundle 'gregsexton/MatchTag'
+Bundle 'Herzult/phpspec-vim'
+Bundle 'joonty/vdebug'
+Bundle 'kien/ctrlp.vim'
+Bundle 'ludovicbarreca/vim-symfony'
+Bundle 'msanders/snipmate.vim'
+Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'rodjek/vim-puppet'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjbach/lusty'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
+Bundle 'veloce/vim-behat'
+Bundle 'vim-scripts/ack.vim'
+Bundle 'vim-scripts/phpfolding.vim'
+Bundle 'vim-scripts/Rename'
+Bundle 'yurifury/hexHighlight'
+
+filetype plugin indent on     " required!
+
+"
+" General configuration
+"
 set encoding=utf-8
 
 syntax enable                     " Turn on syntax highlighting.
