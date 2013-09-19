@@ -1,13 +1,14 @@
 {
-    "minimum-stability": "stable",
-    "require": {
-        "phpunit/phpunit":               "~3.7",
-        "phpunit/php-code-coverage":     "~1.2",
-        "squizlabs/php_codesniffer":     "~1.4",
-        "phploc/phploc":                 "dev-master@dev",
-        "zetacomponents/console-tools":  "dev-master@dev"
+    "require":                                        {
+        "phpunit/phpunit":                            "~3.7",
+        "phpunit/php-code-coverage":                  "~1.2",
+        "squizlabs/php_codesniffer":                  "~1.4",
+        "phploc/phploc":                              "dev-master@dev",
+        "zetacomponents/console-tools":               "dev-master@dev",
+        "whatthejeff/nyancat-phpunit-resultprinter":  "~1.1"
     },
     "config": {
         "bin-dir": "/home/gildas/.local/bin"
-    }
+    },
+    "minimum-stability": "stable"
 }

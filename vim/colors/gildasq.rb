@@ -105,4 +105,13 @@ vim_colors "gildasq" do
     cucumberGiven           "708b10", "none",   :gui => "none"
     cucumberWhen            "b1d631", "none",   :gui => "none"
     cucumberThen            "cceb63", "none",   :gui => "none"
+
+    # CSS
+    cssClassName            "95e454", "none",   :gui => "none"
+    cssPseudoClassId        "ffcc00", "none",   :gui => "none"
+    cssColorProp            "e5786d", "none",   :gui => "none"
+
+    # LESS
+    lessClass               "95e454", "none",   :gui => "none"
+    lessFunction            "e5786d", "none",   :gui => "none"
 end

@@ -94,4 +94,9 @@ hi cucumberExamples        guifg=#FFAA00 ctermfg=214  guibg=NONE    ctermbg=NONE
 hi cucumberGiven           guifg=#708B10 ctermfg=64   guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi cucumberWhen            guifg=#B1D631 ctermfg=149  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi cucumberThen            guifg=#CCEB63 ctermfg=185  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi cssClassName            guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi cssPseudoClassId        guifg=#FFCC00 ctermfg=220  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi cssColorProp            guifg=#E5786D ctermfg=173  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi lessClass               guifg=#95E454 ctermfg=113  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
+hi lessFunction            guifg=#E5786D ctermfg=173  guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 

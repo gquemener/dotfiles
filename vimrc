@@ -15,12 +15,14 @@ Bundle 'beyondwords/vim-twig'
 Bundle 'gerw/vim-HiLinkTrace'
 Bundle 'godlygeek/tabular'
 Bundle 'gregsexton/MatchTag'
+Bundle 'groenewege/vim-less'
 Bundle 'Herzult/phpspec-vim'
 Bundle 'joonty/vdebug'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ludovicbarreca/vim-symfony'
 Bundle 'msanders/snipmate.vim'
 Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'rodjek/vim-puppet'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjbach/lusty'
@@ -135,6 +137,9 @@ imap <right> <nop>
 
 imap <F1> <Esc>
 
+""
+" TABULARIZE
+""
 nmap <leader><tab><tab> :Tab /
 vmap <leader><tab> :Tab /
 nmap <leader><tab>= :Tab /=<cr>
@@ -146,6 +151,19 @@ vmap <leader><tab>> :Tab /=><cr>
 nmap <leader><tab>$ :Tab /$.*<cr>
 vmap <leader><tab>$ :Tab /$.*<cr>
 
+""
+" PHPUNIT
+""
+nnoremap <leader>P :!phpunit -c app/ %<CR>
+
+""
+" WINDOWS MANAGEMENT
+""
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr>
@@ -156,6 +174,9 @@ autocmd FileType * set shiftwidth=4
 autocmd FileType behat set tabstop=2
 autocmd FileType behat set softtabstop=2
 autocmd FileType behat set shiftwidth=2
+autocmd FileType less set tabstop=2
+autocmd FileType less set softtabstop=2
+autocmd FileType less set shiftwidth=2
 
 " Highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
