@@ -42,7 +42,7 @@ URxvt.color14             : #27e7e7
 ! white
 URxvt.color7              : #AAAAAA
 
-URxvt*font                : xft:Inconsolata\ for\ Powerline:regular:pixelsize=12
+URxvt*font                : xft:Inconsolata\ for\ Powerline:regular:pixelsize=14
 URxvt.letterSpace         : -1
 
 URxvt.perl-ext-common     : default,matcher

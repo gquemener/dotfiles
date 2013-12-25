@@ -45,3 +45,4 @@ tags
 code_coverage/*
 Guardfile
 node_modules
+apc.php

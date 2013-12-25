@@ -96,7 +96,7 @@ endif
 
 set laststatus=2                  " Show the status line all the time
 
-colorscheme gildasq
+colorscheme mustang
 
 let mapleader=","
 
@@ -117,7 +117,7 @@ let g:syntastic_mode_map={ 'mode': 'active',
 let g:syntastic_error_symbol   = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
-cabbrev bda bufdo bd<cr>
+cabbrev bda bufdo bw<cr>
 
 inoremap jj      <esc>
 inoremap kk      \
