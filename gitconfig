@@ -15,6 +15,7 @@
 [core]
     excludesfile = ~/.gitignore_global
     editor = gvim --nofork
+	whitespace = trailing-space,space-before-tab
 [web]
     browser = chromium
 [push]
