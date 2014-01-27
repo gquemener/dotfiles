@@ -2,34 +2,22 @@ session:
     name: <%= File.basename(Dir.getwd) %>
     windows:
         -
-            cmd_separator: "\n"
-            with_env_var: false
             name: console
             filters:
                 before: clear
-            splits:
-                -
-                    focus: true
-                -
-                    cmd:
-                        - 'if [ ! -f app/logs/dev.log ]; then touch app/logs/dev.log ; fi'
-                        - 'if [ ! -f app/logs/test.log ]; then touch app/logs/test.log ; fi'
-                        - 'if [ ! -f app/logs/behat.log ]; then touch app/logs/behat.log ; fi'
-                        - tail -f app/logs/dev.log app/logs/test.log app/logs/behat.log
-                    width: 50
-                -
-                    cmd:
-                        - 'if [ ! -f pear.tags ]; then ctags -R -f pear.tags /usr/share/pear ; fi'
-                        - 'if [ ! -f local.tags ]; then ctags -R -f local.tags /home/gildas/bin/dotfiles/vendor ; fi'
-                        - 'if [ ! -f Guardfile ]; then guard init ctags-composer ; fi'
-                        - guard
-                    height: 20
+            layout : "68cb,273x67,0,0[273x64,0,0,0,273x2,0,65,1]"
+            panes:
+                - focus: true
+                - cmd: "java -jar ~/.local/bin/selenium-server-standalone-2.37.0.jar"
         -
-            cmd_separator: "\n"
-            with_env_var: false
             name: editor
             filters:
                 before: clear
-            splits:
-                -
-                    cmd: vim
+            layout : "68cb,273x67,0,0[273x64,0,0,0,273x2,0,65,1]"
+            panes:
+                - cmd: vim
+                - cmd:
+                    - 'if [ ! -f pear.tags ]; then ctags -R -f pear.tags /usr/share/pear ; fi'
+                    - 'if [ ! -f local.tags ]; then ctags -R -f local.tags /home/gildas/bin/dotfiles/vendor ; fi'
+                    - 'if [ ! -f Guardfile ]; then guard init ctags-composer ; fi'
+                    - guard
