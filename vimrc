@@ -31,7 +31,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-ragtag'
 Plugin 'veloce/vim-behat'
 Plugin 'vim-scripts/ack.vim'
-Plugin 'vim-scripts/phpfolding.vim'
 Plugin 'vim-scripts/Rename'
 Plugin 'yurifury/hexHighlight'
 
@@ -169,10 +168,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
-
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
-map <F6> <Esc>:EnablePHPFolds<Cr>
-map <F7> <Esc>:DisablePHPFolds<Cr>
 
 autocmd FileType * set tabstop=4
 autocmd FileType * set softtabstop=4
