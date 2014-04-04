@@ -11,6 +11,7 @@ alias gph='git push'
 alias gd='git diff'
 alias gco='git checkout'
 alias gc='git commit'
+alias clean-branches='git branch --merged | grep -v master | xargs git branch -d'
 
 #some more aliases :)
 alias md='mkdir -p'
