@@ -4,36 +4,36 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'airblade/vim-gitgutter'
-Bundle 'arnaud-lb/vim-php-namespace'
-Bundle 'beyondwords/vim-twig'
-Bundle 'gerw/vim-HiLinkTrace'
-Bundle 'godlygeek/tabular'
-Bundle 'gregsexton/MatchTag'
-Bundle 'groenewege/vim-less'
-Bundle 'Herzult/phpspec-vim'
-Bundle 'honza/vim-snippets'
-Bundle 'itchyny/lightline.vim'
-Bundle 'joonty/vdebug'
-Bundle 'kien/ctrlp.vim'
-Bundle 'nelstrom/vim-markdown-folding'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'rodjek/vim-puppet'
-Bundle 'SirVer/ultisnips'
-Bundle 'sjbach/lusty'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-ragtag'
-Bundle 'veloce/vim-behat'
-Bundle 'vim-scripts/ack.vim'
-Bundle 'vim-scripts/phpfolding.vim'
-Bundle 'vim-scripts/Rename'
-Bundle 'yurifury/hexHighlight'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'beyondwords/vim-twig'
+Plugin 'gerw/vim-HiLinkTrace'
+Plugin 'godlygeek/tabular'
+Plugin 'gregsexton/MatchTag'
+Plugin 'groenewege/vim-less'
+Plugin 'Herzult/phpspec-vim'
+Plugin 'honza/vim-snippets'
+Plugin 'itchyny/lightline.vim'
+Plugin 'joonty/vdebug'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'rodjek/vim-puppet'
+Plugin 'SirVer/ultisnips'
+Plugin 'sjbach/lusty'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-ragtag'
+Plugin 'veloce/vim-behat'
+Plugin 'vim-scripts/ack.vim'
+Plugin 'vim-scripts/phpfolding.vim'
+Plugin 'vim-scripts/Rename'
+Plugin 'yurifury/hexHighlight'
 
 filetype plugin indent on     " required!
 
