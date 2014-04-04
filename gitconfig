@@ -14,7 +14,7 @@
     untracked = red
 [core]
     excludesfile = ~/.gitignore_global
-    editor = gvim --nofork
+    editor = vim
 	whitespace = trailing-space,space-before-tab
 [web]
     browser = chromium

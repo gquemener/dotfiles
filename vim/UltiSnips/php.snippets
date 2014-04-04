@@ -1,0 +1,72 @@
+snippet dvd "dump and die"
+die(var_dump($1));
+endsnippet
+
+snippet ddvd "Doctrine dump and die"
+die(\Doctrine\Common\Util\Debug::dump($1));
+endsnippet
+
+snippet $t "$this->"
+$this->$1
+endsnippet
+
+snippet $t= "$this equals"
+$this->$1 = $$1;
+endsnippet
+
+snippet attr "Attribute"
+/** @var ${2:string} */
+protected $$1;
+endsnippet
+
+snippet let "PhpSpec let function"
+function let($1)
+{
+	$this->beConstructedWith($1);
+}
+endsnippet
+
+snippet it_ "PhpSpec example"
+function it_$1()
+{
+	$2
+}
+endsnippet
+
+snippet its_ "PhpSpec example #2"
+function its_$1()
+{
+	$2
+}
+endsnippet
+
+snippet cpsr "PSR0 class"
+<?php
+
+namespace ${3:`!v substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\', 'g')`};
+
+/**
+ * $3
+ *
+ * @author    Gildas Quemeneer <gildas@akeneo.com>
+ * @copyright 2014 Akeneo SAS (http://www.akeneo.com)
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+class ${2:`!v substitute(expand('%:t'), '.php', '', '')`}
+{
+    ${1}
+}
+endsnippet
+
+snippet fun "function"
+public function $1($2)
+{
+	$3
+}
+endsnippet
+
+snippet inh "inheritdoc"
+/**
+ * {@inheritdoc}
+ */
+endsnippet

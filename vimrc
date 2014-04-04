@@ -17,14 +17,14 @@ Bundle 'godlygeek/tabular'
 Bundle 'gregsexton/MatchTag'
 Bundle 'groenewege/vim-less'
 Bundle 'Herzult/phpspec-vim'
+Bundle 'honza/vim-snippets'
+Bundle 'itchyny/lightline.vim'
 Bundle 'joonty/vdebug'
 Bundle 'kien/ctrlp.vim'
-Bundle 'ludovicbarreca/vim-symfony'
-Bundle 'msanders/snipmate.vim'
 Bundle 'nelstrom/vim-markdown-folding'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'rodjek/vim-puppet'
-Bundle 'scrooloose/syntastic'
+Bundle 'SirVer/ultisnips'
 Bundle 'sjbach/lusty'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
@@ -40,6 +40,7 @@ filetype plugin indent on     " required!
 "
 " General configuration
 "
+scriptencoding utf-8
 set encoding=utf-8
 
 syntax enable                     " Turn on syntax highlighting.
@@ -90,7 +91,7 @@ cscope add cscope.out
 set completeopt=menuone
 
 if has('gui_running')
-    set guifont=Inconsolata\ for\ Powerline\ 11
+    set guifont=Inconsolata\ 11
     set guioptions=eg
 endif
 
@@ -100,8 +101,12 @@ colorscheme mustang
 
 let mapleader=","
 
-" Go back to the method call
-map <leader>p <C-t>
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 "PowerLine
 let g:Powerline_symbols = 'fancy'
@@ -117,6 +122,7 @@ let g:syntastic_mode_map={ 'mode': 'active',
 let g:syntastic_error_symbol   = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
+"Wipe all buffers
 cabbrev bda bufdo bw<cr>
 
 inoremap jj      <esc>
@@ -178,13 +184,16 @@ autocmd FileType less set tabstop=2
 autocmd FileType less set softtabstop=2
 autocmd FileType less set shiftwidth=2
 
-" Highlight trailing whitespaces
+" Highlight trailing whitespaces and long lines
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+set colorcolumn=120
 
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
@@ -231,4 +240,29 @@ function! <SID>MkdirsIfNotExists(directory)
     endif
 endfunction
 
-set rtp+=/home/gildas/.local/lib/python2.7/site-packages/powerline/bindings/vim
+"Lightline
+let g:lightline = {
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component': {
+    \     'readonly': '%{&readonly?"⚷":""}',
+    \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+    \     'fugitive': '%{exists("*fugitive#head")?" " . fugitive#head():""}'
+    \ },
+    \ 'component_function': {
+    \     'filename': 'MyFilename'
+    \ },
+    \ 'component_visible_condition': {
+    \     'readonly': '(&filetype!="help"&& &readonly)',
+    \     'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+    \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \ }
+
+function! MyFilename()
+    return ('' != expand('%:t') ? expand('%') : '[No Name]')
+endfunction
