@@ -8,7 +8,7 @@ session:
             layout : "68cb,273x67,0,0[273x64,0,0,0,273x2,0,65,1]"
             panes:
                 - focus: true
-                - cmd: "java -jar ~/.local/bin/selenium-server-standalone-2.37.0.jar"
+                - cmd: "java -jar ~/.local/bin/selenium-server-standalone-2.41.0.jar"
         -
             name: editor
             filters:

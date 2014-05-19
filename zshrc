@@ -9,8 +9,8 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=500000
 export SAVEHIST=500000
 
-autoload -U compinit
-compinit -i
+autoload -U promptinit
+promptinit
 
 # ls colors
 autoload colors; colors;
@@ -180,7 +180,16 @@ POST_1_7_2_GIT=$(git_compare_version "1.7.2")
 #clean up the namespace slightly by removing the checker function
 unset -f git_compare_version
 
-PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+function last_status() {
+    if [ 0 = $? ]; then
+        echo "%{$fg_no_bold[green]%}➜"
+    else
+        echo "%{$fg_bold[magenta]%}➜"
+    fi
+}
+
+PROMPT='$(last_status)%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+RPROMPT='[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

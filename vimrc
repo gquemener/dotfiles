@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'beyondwords/vim-twig'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'gerw/vim-HiLinkTrace'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
@@ -34,8 +35,7 @@ Plugin 'veloce/vim-behat'
 Plugin 'vim-scripts/ack.vim'
 Plugin 'vim-scripts/Rename'
 Plugin 'yurifury/hexHighlight'
-
-filetype plugin indent on     " required!
+Plugin 'stephpy/vim-yaml'
 
 "
 " General configuration
@@ -101,24 +101,13 @@ colorscheme mustang
 
 let mapleader=","
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-"PowerLine
-let g:Powerline_symbols = 'fancy'
-let g:PowerLine_cache_file="/tmp/powerline.cache"
-
 "behat
 let feature_filetype='behat'
 
 "Syntastic
 let g:syntastic_mode_map={ 'mode': 'active',
-            \ 'active_filetypes': ['ruby', 'php'],
-            \ 'passive_filetypes': ['css', 'scss'] }
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['ruby', 'php', 'css', 'scss'] }
 let g:syntastic_error_symbol   = '✗'
 let g:syntastic_warning_symbol = '⚠'
 
@@ -179,6 +168,9 @@ autocmd FileType behat set shiftwidth=2
 autocmd FileType less set tabstop=2
 autocmd FileType less set softtabstop=2
 autocmd FileType less set shiftwidth=2
+autocmd FileType scala set tabstop=2
+autocmd FileType scala set softtabstop=2
+autocmd FileType scala set shiftwidth=2
 
 " Highlight trailing whitespaces and long lines
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -189,7 +181,8 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set colorcolumn=120
+autocmd FileType * set colorcolumn=120
+autocmd FileType gitcommit set colorcolumn=72
 
 " automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
@@ -208,6 +201,9 @@ map! <leader><F3> :call StripTrailingWhitespace()<CR>
 nmap <leader>f :grep -Rn "<C-r><C-w>"
 " do a grep search on the selected text
 vmap <leader>f y:grep -Rn "<C-r>"
+" adds the grep result to the args list to perform mass edit operation
+nmap <leader>a :args `grep -Rl \"<C-r><C-w>\" src/`
+
 
 let g:ctrlp_cmd = 'CtrlPMRU'
 map <leader>lp :LustyJugglePrevious<cr>
