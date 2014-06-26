@@ -5,6 +5,7 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/doc/
 call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
@@ -28,6 +29,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'sjbach/lusty'
+Plugin 'stephpy/vim-yaml'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-ragtag'
@@ -35,7 +37,6 @@ Plugin 'veloce/vim-behat'
 Plugin 'vim-scripts/ack.vim'
 Plugin 'vim-scripts/Rename'
 Plugin 'yurifury/hexHighlight'
-Plugin 'stephpy/vim-yaml'
 
 "
 " General configuration
