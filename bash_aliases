@@ -19,7 +19,7 @@ alias md='mkdir -p'
 
 alias tsf="teamocil --here sf"
 
-alias sf="./app/console"
+alias sf="./bin/console"
 alias sft="phpspec run -fpretty"
 alias sfb="behat --no-paths"
 alias sfu="phpunit -c app"
