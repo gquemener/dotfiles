@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while file=$(inotifywait -r -e modify -e delete -e create -e move --format "%w%f" ./); do
+    if [[ "${file##*.}" == "php" ]]
+    then
+        if [[ "${file:2:6}" == "vendor" ]]; then
+            ctags -R ./vendor --languages=php -f vendor.tags
+            echo "Vendor ctags regenerated..."
+        else
+            ctags -R ./src app/AppKernel.php ./features ./spec --languages=php
+            echo "Project ctags regenerated..."
+        fi
+    fi
+done
