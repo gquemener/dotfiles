@@ -33,8 +33,8 @@ alias apts="sudo apt-cache search"
 alias aptu="sudo apt-get update && sudo apt-get upgrade"
 
 #composer aliases
-alias compi="composer.phar install --dev --prefer-dist"
-alias compu="composer.phar update --dev --prefer-dist"
+alias compi="composer.phar install --prefer-dist"
+alias compu="composer.phar update --prefer-dist"
 
 alias x-on="sudo sed -i -e 's/^;\+//' /etc/php5/conf.d/20-xdebug.ini"
 alias x-off="sudo sed -i -e 's/^/;/' /etc/php5/conf.d/20-xdebug.ini"

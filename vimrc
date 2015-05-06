@@ -14,6 +14,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'beyondwords/vim-twig'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'docteurklein/php-getter-setter.vim'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'gerw/vim-HiLinkTrace'
 Plugin 'godlygeek/tabular'
@@ -22,6 +24,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'Herzult/phpspec-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'joonty/vdebug'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nelstrom/vim-markdown-folding'
@@ -167,9 +170,9 @@ autocmd FileType * set shiftwidth=4
 autocmd FileType behat set tabstop=2
 autocmd FileType behat set softtabstop=2
 autocmd FileType behat set shiftwidth=2
-autocmd FileType less set tabstop=2
-autocmd FileType less set softtabstop=2
-autocmd FileType less set shiftwidth=2
+autocmd FileType less set tabstop=4
+autocmd FileType less set softtabstop=4
+autocmd FileType less set shiftwidth=4
 autocmd FileType scala set tabstop=2
 autocmd FileType scala set softtabstop=2
 autocmd FileType scala set shiftwidth=2
@@ -260,3 +263,6 @@ let g:lightline = {
 function! MyFilename()
     return ('' != expand('%:t') ? expand('%') : '[No Name]')
 endfunction
+
+let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/var/www": "/home/gildas/projects/ipocrate"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '172.17.42.1'}
+"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}

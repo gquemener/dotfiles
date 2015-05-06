@@ -47,3 +47,4 @@ Guardfile
 node_modules
 apc.php
 app_xhprof.php
+/app/database

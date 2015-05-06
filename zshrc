@@ -1,6 +1,6 @@
 export EDITOR=vim
 export PAGER=less
-export BROWSER=chromium-browser
+export BROWSER=chromium
 export LANG=en_US.UTF-8
 
 source $HOME/.bash_aliases
@@ -196,7 +196,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-export PATH=/home/gildas/.local/bin:/home/gildas/bin:/home/gildas/.rvm/gems/ruby-1.9.3-p194/bin:/home/gildas/.rvm/gems/ruby-1.9.3-p194@global/bin:/home/gildas/.rvm/rubies/ruby-1.9.3-p194/bin:/home/gildas/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin
+export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.1.0/bin:/root/.gem/ruby/2.1.0/bin:/usr/lib/node_modules
+
 
 #repository=`git config remote.origin.url | sed -E 's/git@github.com:(.*).git/\1/g'`
 [ ! -d ~/projects ] && mkdir ~/projects
