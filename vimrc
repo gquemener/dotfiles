@@ -211,6 +211,11 @@ nmap <leader>a :args `grep -Rl \"<C-r><C-w>\" src/`
 
 
 let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 map <leader>lp :LustyJugglePrevious<cr>
 
 " search on php.net for current word
@@ -264,5 +269,7 @@ function! MyFilename()
     return ('' != expand('%:t') ? expand('%') : '[No Name]')
 endfunction
 
-let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/var/www": "/home/gildas/projects/ipocrate"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '172.17.42.1'}
+"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/1001cine-movie-upload"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '127.0.0.1'}
+"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/1001cine"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '172.17.42.1'}
+let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/lestaff"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
 "let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': '', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}

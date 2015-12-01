@@ -1,4 +1,4 @@
-PATH="./bin:./vendor/bin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.rvm/bin:$PATH"
+PATH="./node_modules/.bin/:./bin:./vendor/bin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.rvm/bin:$PATH"
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000

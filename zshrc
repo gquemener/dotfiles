@@ -2,12 +2,20 @@ export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
 export LANG=en_US.UTF-8
+export TERM='xterm-256color'
 
 source $HOME/.bash_aliases
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=500000
 export SAVEHIST=500000
+
+autoload up-line-or-beginning-search
+autoload down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey   "^[[A"    up-line-or-beginning-search
+bindkey   "^[[B"    down-line-or-beginning-search
 
 autoload -U promptinit
 promptinit
@@ -65,6 +73,15 @@ setopt alwaystoend
 setopt correct
 
 bindkey "^R" history-incremental-search-backward
+bindkey '^?' backward-delete-char
+bindkey '^[[7~' beginning-of-line
+bindkey '^[[8~' end-of-line
+bindkey "^P" vi-up-line-or-history
+bindkey "^N" vi-down-line-or-history
+bindkey "^[[1~" vi-beginning-of-line   # Home
+bindkey "^[[4~" vi-end-of-line         # End
+bindkey '^[[5~' vi-backward-blank-word # Page Up
+bindkey '^[[6~' vi-forward-blank-word  # Page Down
 
 if [[ x$WINDOW != x ]]
 then
@@ -196,11 +213,15 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.1.0/bin:/root/.gem/ruby/2.1.0/bin:/usr/lib/node_modules
+export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.1.0/bin:/root/.gem/ruby/2.1.0/bin:/usr/lib/node_modules:/opt/android-sdk/tools
 
 
 #repository=`git config remote.origin.url | sed -E 's/git@github.com:(.*).git/\1/g'`
 [ ! -d ~/projects ] && mkdir ~/projects
 [ -z "$TMUX" ] && cd ~/projects
 
-export TERM='xterm-256color'
+PATH="/home/gildas/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/gildas/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/gildas/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/gildas/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/gildas/perl5"; export PERL_MM_OPT;
