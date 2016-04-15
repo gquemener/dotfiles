@@ -23,7 +23,9 @@ promptinit
 # ls colors
 autoload colors; colors;
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
-#export LS_COLORS
+
+# autocompletion
+autoload -Uz compinit && compinit
 
 # Enable ls colors
 if [ "$DISABLE_LS_COLORS" != "true" ]
@@ -45,6 +47,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*:descriptions' format '%U%F{yellow}%d%f%u'
+
+# git completion
+fpath=(/usr/share/git/completion/ $fpath)
 
 #setopt no_beep
 setopt auto_cd
@@ -225,3 +230,4 @@ PERL5LIB="/home/gildas/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB
 PERL_LOCAL_LIB_ROOT="/home/gildas/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/gildas/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/gildas/perl5"; export PERL_MM_OPT;
+PATH="/usr/local/heroku/bin:$PATH"

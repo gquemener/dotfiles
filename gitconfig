@@ -1,6 +1,7 @@
 [user]
     name = Gildas Quéméner
     email = gildas.quemener@gmail.com
+    signinkey = 7805043F
 [alias]
     co = checkout
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -16,6 +17,7 @@
     excludesfile = ~/.gitignore_global
     editor = vim
 	whitespace = trailing-space,space-before-tab
+	attributesfile = ~/.gitattributes
 [web]
     browser = chromium
 [push]
@@ -28,3 +30,5 @@
     abbrevCommit = true
 [diff]
     mnemonicPrefix = true
+[diff "image"]
+	command = ~/bin/git-imgdiff

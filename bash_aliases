@@ -36,10 +36,10 @@ alias aptu="sudo apt-get update && sudo apt-get upgrade"
 alias compi="composer.phar install --prefer-dist"
 alias compu="composer.phar update --prefer-dist"
 
-alias x-on="sudo sed -i -e 's/^;\+//' /etc/php5/conf.d/20-xdebug.ini"
-alias x-off="sudo sed -i -e 's/^/;/' /etc/php5/conf.d/20-xdebug.ini"
+alias x-on="sudo sed -i -e 's/^;\+//' /etc/php/conf.d/xdebug.ini"
+alias x-off="sudo sed -i -e 's/^/;/' /etc/php/conf.d/xdebug.ini"
 
-alias phpfix="git diff --name-only --cached | xargs -n 1 php ~/.local/bin/php-cs-fixer.phar fix"
+alias phpfix="git diff --name-only --cached | xargs -n 1 /home/gildas/.composer/vendor/bin/php-cs-fixer fix"
 
 alias cucumber="./node_modules/.bin/gulp test --file"
 
@@ -48,12 +48,15 @@ alias myip="curl http://ipecho.net/plain ; echo"
 alias dc="docker-compose"
 alias dcl="docker-compose logs"
 alias dcp="docker-compose ps"
-alias dcu="docker-compose up -d"
+alias dcu="docker-compose up -d && update-docker-hosts"
+alias dcux="docker-compose --x-networking up -d"
 alias dcu-nd="docker-compose up -d --no-deps"
 alias dcu-nr="docker-compose up -d --no-recreate"
 alias dcr="docker-compose run --rm"
 alias de="docker exec -it"
 alias drm="docker ps -qa | xargs docker rm -fv"
+alias drmi="docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')"
 alias dm="docker-machine"
+alias de="env | grep DOCKER_"
 
 alias tmf='tmux attach -t $(basename $(pwd)) || tmux new -s $(basename $(pwd)) tmux source-file .tmux.conf'
