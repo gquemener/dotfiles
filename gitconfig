@@ -32,3 +32,5 @@
     mnemonicPrefix = true
 [diff "image"]
 	command = ~/bin/git-imgdiff
+[commit]
+    gpgsign = true
