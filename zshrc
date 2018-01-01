@@ -2,13 +2,15 @@ export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
 export LANG=en_US.UTF-8
-export TERM='xterm-256color'
+export TERM='screen-256color'
 
 source $HOME/.bash_aliases
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=500000
 export SAVEHIST=500000
+
+export DOCKER_HUB_USERNAME=gquemener
 
 autoload up-line-or-beginning-search
 autoload down-line-or-beginning-search
@@ -210,7 +212,15 @@ function last_status() {
     fi
 }
 
-PROMPT='$(last_status)%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+function current_docker_machine_name() {
+    if [ -n "$DOCKER_MACHINE_NAME" ]; then
+        echo "${DOCKER_MACHINE_NAME}"
+    else
+        echo "local"
+    fi
+}
+
+PROMPT='$(last_status)%{$fg_no_bold[red]%} [${:-%m}] %{$fg_no_bold[yellow]%}($(current_docker_machine_name))%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 RPROMPT='[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
@@ -218,7 +228,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.1.0/bin:/root/.gem/ruby/2.1.0/bin:/usr/lib/node_modules:/opt/android-sdk/tools
+export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.4.0/bin:/usr/lib/node_modules:./node_modules/.bin
 
 
 #repository=`git config remote.origin.url | sed -E 's/git@github.com:(.*).git/\1/g'`
@@ -231,3 +241,8 @@ PERL_LOCAL_LIB_ROOT="/home/gildas/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_
 PERL_MB_OPT="--install_base \"/home/gildas/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/gildas/perl5"; export PERL_MM_OPT;
 PATH="/usr/local/heroku/bin:$PATH"
+
+ANDROID_HOME=~/Android/Sdk
+PATH="$PATH:$ANDROID_HOME/tools"
+
+export PATH="$HOME/.yarn/bin:$PATH"
