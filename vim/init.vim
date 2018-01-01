@@ -1,0 +1,1 @@
+/home/gildas/.vimrc
