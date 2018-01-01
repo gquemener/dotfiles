@@ -7,6 +7,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     dw = diff --word-diff
     st = status --short --branch
+    standup = log --since yesterday --author gildas.quemener@gmail.com --pretty=oneline
 [color]
     ui = auto
 [color "status"]
@@ -18,6 +19,7 @@
     editor = vim
 	whitespace = trailing-space,space-before-tab
 	attributesfile = ~/.gitattributes
+	autocrlf = input
 [web]
     browser = chromium
 [push]
@@ -30,7 +32,7 @@
     abbrevCommit = true
 [diff]
     mnemonicPrefix = true
-[diff "image"]
-	command = ~/bin/git-imgdiff
+[diff "exif"]
+	textconv = exiftool
 [commit]
     gpgsign = true
