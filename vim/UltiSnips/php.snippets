@@ -22,7 +22,7 @@ endsnippet
 snippet let "PhpSpec let function"
 function let($1)
 {
-	$this->beConstructedWith($1);
+	$this->beConstructedWith($2);
 }
 endsnippet
 
@@ -43,9 +43,11 @@ endsnippet
 snippet cpsr "PSR0 class"
 <?php
 
+declare (strict_types = 1);
+
 namespace ${3:`!v substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\', 'g')`};
 
-class ${2:`!v substitute(expand('%:t'), '.php', '', '')`}
+final class ${2:`!v substitute(expand('%:t'), '.php', '', '')`}
 {
     ${1}
 }
@@ -66,4 +68,8 @@ endsnippet
 
 snippet todo "TODO"
 // TODO (`!v strftime("%Y-%m-%d %H:%M")` by Gildas): $1
+endsnippet
+
+snippet @var "vardoc"
+/** @var $1 */
 endsnippet

@@ -4,11 +4,11 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/doc/
-call vundle#rc()
+call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
@@ -18,6 +18,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'docteurklein/php-getter-setter.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'gerw/vim-HiLinkTrace'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
@@ -28,6 +29,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'joonty/vdebug'
 Plugin 'kien/ctrlp.vim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'rodjek/vim-puppet'
@@ -42,8 +44,8 @@ Plugin 'veloce/vim-behat'
 Plugin 'vim-scripts/ack.vim'
 Plugin 'vim-scripts/Rename'
 Plugin 'yurifury/hexHighlight'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'leafgarland/typescript-vim'
+
+call vundle#end()
 
 "
 " General configuration
@@ -252,7 +254,7 @@ let g:lightline = {
     \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component': {
-    \     'readonly': '%{&readonly?"⚷":""}',
+    \     'readonly': '%{&readonly?"":""}',
     \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
     \     'fugitive': '%{exists("*fugitive#head")?" " . fugitive#head():""}'
     \ },
@@ -272,14 +274,21 @@ function! MyFilename()
     return ('' != expand('%:t') ? expand('%') : '[No Name]')
 endfunction
 
-"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/1001cine-movie-upload"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '127.0.0.1'}
-"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/1001cine"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
-"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/lestaff"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
 "let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
-let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/MoovTime-API"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
-"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim_session', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/MoovTime-Back-Office"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
+let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/code-shakr/frontend"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
+"let g:vdebug_options = {'debug_file': '', 'debug_file_level': 0, 'watch_window_style': 'expanded', 'marker_default': '⬦', 'continuous_mode': 0, 'ide_key': 'vim', 'break_on_open': 1, 'on_close': 'detach', 'path_maps': {"/data/www": "/home/gildas/projects/code-shakr/frontend"}, 'marker_closed_tree': '▸', 'timeout': 20, 'port': 9000, 'marker_open_tree': '▾', 'debug_window_level': 0, 'server': '0.0.0.0'}
 
 
 "" BRIGHT CONDITIONS
 " set background=dark
 " colorscheme default
+
+
+"" UltiSnips
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+"" Python
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
