@@ -2,4 +2,4 @@
 *.cache
 .netrwhist
 vendor/
-vim/bundle/*
+vim/plugged/*

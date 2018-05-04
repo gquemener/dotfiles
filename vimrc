@@ -4,48 +4,43 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/doc/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'beyondwords/vim-twig'
+Plug 'docteurklein/php-getter-setter.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'gerw/vim-HiLinkTrace'
+Plug 'godlygeek/tabular'
+Plug 'gregsexton/MatchTag'
+Plug 'groenewege/vim-less'
+Plug 'Herzult/phpspec-vim'
+Plug 'honza/vim-snippets'
+Plug 'itchyny/lightline.vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'joonty/vdebug'
+Plug 'kien/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'scrooloose/syntastic'
+Plug 'SirVer/ultisnips'
+Plug 'sjbach/lusty'
+Plug 'stephpy/vim-yaml'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-ragtag'
+Plug 'vim-scripts/ack.vim'
+Plug 'vim-scripts/Rename'
+Plug 'mxw/vim-jsx'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'docker run --rm -ti -v \"$PWD\":/app -v /home/gildas/.composer/:/.composer --user \"$(id -u):$(id -g)\" -w /app composer install'}
 
-Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'beyondwords/vim-twig'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'docteurklein/php-getter-setter.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'gerw/vim-HiLinkTrace'
-Plugin 'godlygeek/tabular'
-Plugin 'gregsexton/MatchTag'
-Plugin 'groenewege/vim-less'
-Plugin 'Herzult/phpspec-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'itchyny/lightline.vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'joonty/vdebug'
-Plugin 'kien/ctrlp.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'rodjek/vim-puppet'
-Plugin 'scrooloose/syntastic'
-Plugin 'SirVer/ultisnips'
-Plugin 'sjbach/lusty'
-Plugin 'stephpy/vim-yaml'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-ragtag'
-Plugin 'veloce/vim-behat'
-Plugin 'vim-scripts/ack.vim'
-Plugin 'vim-scripts/Rename'
-Plugin 'yurifury/hexHighlight'
+call plug#end()
 
-call vundle#end()
+let g:phpactorPhpBin = "docker run -i --rm -v \"$PWD\":/app -v /home/gildas/bin/dotfiles/vim/plugged/phpactor:/phpactor -w /app php:7-cli"
+let g:phpactorInitialCwd = "/app"
+let g:phpactorbinpath = "/phpactor/bin/phpactor"
 
 "
 " General configuration
