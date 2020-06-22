@@ -1,12 +1,12 @@
 [user]
     name = Gildas Quéméner
     email = gildas.quemener@gmail.com
-    signinkey = 7805043F
+    signinkey = B9976FC98B7ABF43
 [alias]
     co = checkout
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     dw = diff --word-diff
-    st = status --short --branch
+    st = status --branch -uall
     standup = log --since yesterday --author gildas.quemener@gmail.com --pretty=oneline
 [color]
     ui = auto

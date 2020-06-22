@@ -243,6 +243,9 @@ PERL_MM_OPT="INSTALL_BASE=/home/gildas/perl5"; export PERL_MM_OPT;
 PATH="/usr/local/heroku/bin:$PATH"
 
 ANDROID_HOME=~/Android/Sdk
+COMPOSER_HOME=~/.composer
 PATH="$PATH:$ANDROID_HOME/tools"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

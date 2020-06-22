@@ -42,11 +42,3 @@ Thumbs.db
 phpunit.xml
 tags
 *.tags
-code_coverage/*
-Guardfile
-node_modules
-apc.php
-app_xhprof.php
-/app/database
-/app/mysql
-/app/elasticsearch

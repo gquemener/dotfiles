@@ -10,7 +10,7 @@ shopt -s checkwinsize
 export PROMPT_COMMAND='history -a'
 export EDITOR=vim
 export PAGER=less
-export BROWSER=chromium
+export BROWSER=firefox
 export LANG=en_US.UTF-8
 
 if [ -f ~/.bash_aliases ]; then
@@ -37,3 +37,5 @@ export PS1="\n\\[$(tput setab 0) $(tput bold)$(tput setaf 6)\\]\A \\[$(tput seta
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 setxkbmap -layout fr
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

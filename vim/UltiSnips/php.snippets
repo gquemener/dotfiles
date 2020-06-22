@@ -1,3 +1,7 @@
+snippet xb "breakpoint"
+xdebug_break();
+endsnippet
+
 snippet dvd "dump and die"
 die(var_dump($1));
 endsnippet
@@ -42,8 +46,7 @@ endsnippet
 
 snippet cpsr "PSR0 class"
 <?php
-
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace ${3:`!v substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\', 'g')`};
 
