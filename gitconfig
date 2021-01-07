@@ -17,11 +17,11 @@
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
-	whitespace = trailing-space,space-before-tab
-	attributesfile = ~/.gitattributes
-	autocrlf = input
+    whitespace = trailing-space,space-before-tab
+    attributesfile = ~/.gitattributes
+    autocrlf = input
 [web]
-    browser = chromium
+    browser = firefox
 [push]
     default = current
 [mergetool]
@@ -35,4 +35,5 @@
 [diff "exif"]
 	textconv = exiftool
 [commit]
-    gpgsign = true
+[pull]
+	rebase = false

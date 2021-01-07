@@ -1,4 +1,0 @@
-$HTTP["host"] == "%project_url%" {
-    server.name          = "%project_url%" 
-    server.document-root = "%project_dir%"
-}
