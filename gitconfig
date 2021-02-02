@@ -35,5 +35,6 @@
 [diff "exif"]
 	textconv = exiftool
 [commit]
+    gpgsign = false
 [pull]
 	rebase = false

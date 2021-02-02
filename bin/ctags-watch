@@ -1,0 +1,29 @@
+#!/bin/bash
+
+sudo sysctl fs.inotify.max_user_watches=32768
+
+DIRECTORIES=$@
+
+function generateSrcTags {
+    ctags -R $DIRECTORIES --languages=php --php-kinds=cdfitv
+    echo "$(date) Project ctags regenerated..."
+}
+
+function generateVendorTags() {
+    ctags -R -f vendor.tags vendor --languages=php --php-kinds=cdfitv
+    echo "$(date) Vendor ctags regenerated..."
+}
+
+while true; do
+    generateSrcTags
+    generateVendorTags
+
+    while file=$(inotifywait -r -e modify -e delete -e create -e move --format "%w%f" --quiet ./); do
+        if [[ "${file:2:6}" == "vendor" ]]; then
+            generateVendorTags
+        else
+            generateSrcTags
+        fi
+    done
+    sleep 1
+done
