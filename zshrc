@@ -248,6 +248,10 @@ PATH="$PATH:$ANDROID_HOME/tools"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
+export ARDUINO_DIR=/usr/share/arduino
+export ARDMK_DIR=/usr/share/arduino
+export AVR_TOOLS_DIR=/usr
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 for z in $HOME/.zsh.d/*.zsh; do
