@@ -5,12 +5,12 @@ sudo sysctl fs.inotify.max_user_watches=32768
 DIRECTORIES=$@
 
 function generateSrcTags {
-    ctags -R --PHP-kinds=cfit $DIRECTORIES
+    ctags -R --languages=php --kinds-PHP=-a $DIRECTORIES
     echo "$(date) Project ctags regenerated..."
 }
 
 function generateVendorTags() {
-    ctags -R -f vendor.tags --PHP-kinds=cfit vendor
+    ctags -R -f vendor.tags --languages=php --kinds-PHP=-a vendor
     echo "$(date) Vendor ctags regenerated..."
 }
 
