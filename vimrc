@@ -34,7 +34,9 @@ Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/Rename'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+Plug 'aklt/plantuml-syntax'
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 call plug#end()
 
@@ -170,19 +172,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-autocmd FileType * set tabstop=4
-autocmd FileType * set softtabstop=4
-autocmd FileType * set shiftwidth=4
-autocmd FileType behat set tabstop=2
-autocmd FileType behat set softtabstop=2
-autocmd FileType behat set shiftwidth=2
-autocmd FileType less set tabstop=4
-autocmd FileType less set softtabstop=4
-autocmd FileType less set shiftwidth=4
-autocmd FileType scala set tabstop=2
-autocmd FileType scala set softtabstop=2
-autocmd FileType scala set shiftwidth=2
-
 " Highlight trailing whitespaces and long lines
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -278,11 +267,11 @@ let g:vdebug_options = {
     \ 'ide_key': '',
     \ 'break_on_open': 1,
     \ 'on_close': 'detach',
-    \ 'path_maps': {'/app': './', '/code': './'},
+    \ 'path_maps': {'/app': './', '/code': './', '/apps/drupal': './', '/apps/baseadmin/basetunnel': './'},
     \ 'timeout': 20,
     \ 'debug_window_level': 0,
     \ 'server': '0.0.0.0',
-    \ 'port': 9000,
+    \ 'port': 9003,
     \ 'watch_window_style' : 'expanded',
     \ 'marker_default' : '-',
     \ 'marker_closed_tree' : '▸',
@@ -343,3 +332,7 @@ command! -bang -nargs=* Rg
 
 " Search all files content
 nnoremap <C-f> :Rg "<cword>"
+
+" Phpactor
+nmap gd :PhpactorGotoDefinition<CR>
+nmap gr :PhpactorFindReferences<CR>

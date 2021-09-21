@@ -7,8 +7,11 @@ export TERM='screen-256color'
 source $HOME/.bash_aliases
 
 export HISTFILE=~/.zsh_history
-export HISTSIZE=500000
-export SAVEHIST=500000
+export SAVEHIST=500000         # Write n entries at the end of the session
+export HISTSIZE=500000         # Read n entries from $HISTFILE
+setopt APPEND_HISTORY          # Append the new history to the old
+setopt SHARE_HISTORY           # The history file is checked to see if anything was written out by another shell,
+                               # and if so it is included in the history of the current shell too
 
 export DOCKER_HUB_USERNAME=gquemener
 
@@ -253,6 +256,8 @@ export ARDMK_DIR=/usr/share/arduino
 export AVR_TOOLS_DIR=/usr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(direnv hook zsh)"
 
 for z in $HOME/.zsh.d/*.zsh; do
   source "$z"
