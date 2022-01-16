@@ -82,6 +82,8 @@ set nowritebackup                 " And again.
 set noswapfile
 
 set expandtab                    " Use spaces instead of tabs
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set smartindent
 set nolist
@@ -271,7 +273,7 @@ let g:vdebug_options = {
     \ 'timeout': 20,
     \ 'debug_window_level': 0,
     \ 'server': '0.0.0.0',
-    \ 'port': 9003,
+    \ 'port': 9000,
     \ 'watch_window_style' : 'expanded',
     \ 'marker_default' : '-',
     \ 'marker_closed_tree' : '▸',
@@ -336,3 +338,4 @@ nnoremap <C-f> :Rg "<cword>"
 " Phpactor
 nmap gd :PhpactorGotoDefinition<CR>
 nmap gr :PhpactorFindReferences<CR>
+nmap gc :PhpactorContextMenu<CR>
