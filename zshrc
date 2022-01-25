@@ -257,8 +257,6 @@ export AVR_TOOLS_DIR=/usr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(direnv hook zsh)"
-
 for z in $HOME/.zsh.d/*.zsh; do
   source "$z"
 done
