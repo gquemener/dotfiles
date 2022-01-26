@@ -9,8 +9,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'Herzult/phpspec-vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
+Plug 'aklt/plantuml-syntax'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'beyondwords/vim-twig'
+Plug 'dense-analysis/ale'
 Plug 'docteurklein/php-getter-setter.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'edkolev/tmuxline.vim'
@@ -29,14 +31,12 @@ Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'nelstrom/vim-markdown-folding'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 Plug 'sjbach/lusty'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/Rename'
-" Plug 'vim-syntastic/syntastic'
-Plug 'aklt/plantuml-syntax'
-Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 call plug#end()
 
@@ -335,7 +335,6 @@ command! -bang -nargs=* Rg
 " Search all files content
 nnoremap <C-f> :Rg "<cword>"
 
-" Phpactor
-nmap gd :PhpactorGotoDefinition<CR>
-nmap gr :PhpactorFindReferences<CR>
-nmap gc :PhpactorContextMenu<CR>
+" ALE
+nmap gd :ALEGoToDefinition<CR>
+nmap gr :ALEFindReferences<CR>
