@@ -1,0 +1,21 @@
+snippet rc "React Component"
+import React, { Component } from 'react';
+
+class $1 extends Component {
+	render() {
+		return (
+			<div>$1</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet frc "Functionnal React Component"
+export default function(props) {
+	return (
+		$1
+	);
+}
+endsnippet

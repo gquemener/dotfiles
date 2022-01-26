@@ -1,0 +1,39 @@
+"Remove compatibility with vi.
+set nocompatible
+" Add find in subdirectories
+set path+=**
+" Necessary to allow LSP to make modifications in several files
+set hidden
+
+" Load filetype-specific indent files
+filetype indent on
+
+"Add autocompletion using tab for commands.
+set wildmenu
+
+"---- Search configurations ----
+"Incremental search enabled
+set incsearch
+
+"Highlight matches as we type
+set hlsearch
+
+"Ignore case for searches
+set ignorecase
+
+"---------- Tabs as spaces -------------------
+set expandtab
+set smarttab
+set softtabstop=0
+set tabstop=8
+set shiftwidth=4
+
+" --------- Reminder to use folders
+set foldlevelstart=1
+
+" ----- Treesitter folding
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
+" Reduce timeout len in order to display keybindings help
+set timeoutlen=500
