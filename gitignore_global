@@ -42,3 +42,8 @@ Thumbs.db
 phpunit.xml
 tags
 *.tags
+
+# Eclipse
+.project
+.settings
+.classpath
