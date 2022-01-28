@@ -34,6 +34,7 @@ local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local servers = {
     'phpactor',
     'jdtls',
+    'sumneko_lua',
 }
 
 -- Loop through the servers listed above.
