@@ -21,6 +21,9 @@ set hlsearch
 "Ignore case for searches
 set ignorecase
 
+"Enable smart case detection
+set smartcase
+
 "---------- Tabs as spaces -------------------
 set expandtab
 set smarttab
