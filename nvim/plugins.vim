@@ -25,4 +25,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " Kotlin
 Plug 'udalov/kotlin-vim'
 
+" Misc
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
