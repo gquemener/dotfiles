@@ -1,35 +1,30 @@
-#!/bin/bash
-# Modified from http://stackoverflow.com/a/1617048/359287
-# By Hadi Badjian @hadibadjian
+#!/bin/sh
 
 begin=""
 homebegin=""
 shortbegin=""
 current=""
-end="${2:-$(pwd)}/" # The unmodified rest of the path.
+end="${2:-$1}/" # The unmodified rest of the path.
 end="${end#/}" # Strip the first /
 shortenedpath="$end"
 
-shopt -q nullglob && NGV="-s" || NGV="-u"
-shopt -s nullglob
-
 while [[ "$end" ]]
 do
-  current="${end%%/*}" # Everything before the first /
-  end="${end#*/}" # Everything after the first /
+    current="${end%%/*}" # Everything before the first /
+end="${end#*/}" # Everything after the first /
 
-  shortcur="${current:0:1}"
+shortcur="${current:0:1}"
 
-  begin="$begin/$current"
-  homebegin="$homebegin/$current"
-  [[ "$homebegin" =~ ^"$HOME"(/|$) ]] && homebegin="~${homebegin#$HOME}" # Convert HOME to ~
-  shortbegin="$shortbegin/$shortcur"
-  [[ "$homebegin" == "~" ]] && shortbegin="~" # Use ~ for home
+begin="$begin/$current"
+homebegin="$homebegin/$current"
+[[ "$homebegin" =~ ^"$HOME"(/|$) ]] && homebegin="~${homebegin#$HOME}" # Convert HOME to ~
+shortbegin="$shortbegin/$shortcur"
+[[ "$homebegin" == "~" ]] && shortbegin="~" # Use ~ for home
 
-  slashes="${end//[^\/]}"
-  if [[ ${#slashes} > 0 ]]; then
+slashes="${end//[^\/]}"
+if [[ ${#slashes} > 0 ]]; then
     shortenedpath="$shortbegin/$end"
-  fi
+fi
 done
 
 shortenedpath="${shortenedpath%/}" # Strip trailing /
