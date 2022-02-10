@@ -27,5 +27,7 @@ Plug 'udalov/kotlin-vim'
 
 " Misc
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mileszs/ack.vim'
+
 
 call plug#end()
