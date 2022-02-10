@@ -1,3 +1,5 @@
+cabbrev bda bufdo bw<cr>
+
 inoremap jj      <esc>
 inoremap kk      \
 inoremap <up>    <nop>
