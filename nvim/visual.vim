@@ -18,10 +18,10 @@ set laststatus=2
 set noshowmode
 
 " Turn on line wrapping.
-set wrap                          
+set wrap
 
 " Show 3 lines of context around the cursor.
-set scrolloff=3                   
+set scrolloff=3
 
 " Highlight current line
 set cursorline
@@ -32,3 +32,10 @@ set mouse=n
 " Display color column
 autocmd FileType * set colorcolumn=120
 autocmd FileType gitcommit set colorcolumn=72
+
+" Highlight trailing whitespaces and long lines
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
