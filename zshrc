@@ -234,22 +234,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 export PATH=/home/gildas/.local/bin:/home/gildas/.composer/vendor/bin:/home/gildas/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gildas/bin:/home/gildas/.rvm/bin:/home/gildas/bin:/home/gildas/.rvm/bin:./bin:./vendor/bin:/home/gildas/.phpenv/bin:/home/gildas/.gem/ruby/2.4.0/bin:/usr/lib/node_modules:./node_modules/.bin
 
 
-#repository=`git config remote.origin.url | sed -E 's/git@github.com:(.*).git/\1/g'`
 [ ! -d ~/projects ] && mkdir ~/projects
 [ -z "$TMUX" ] && cd ~/projects
-
-PATH="/home/gildas/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/gildas/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/gildas/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/gildas/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/gildas/perl5"; export PERL_MM_OPT;
-PATH="/usr/local/heroku/bin:$PATH"
-
-ANDROID_HOME=~/Android/Sdk
-COMPOSER_HOME=~/.composer
-PATH="$PATH:$ANDROID_HOME/tools"
-
-export PATH="$HOME/.yarn/bin:$PATH"
 
 export ARDUINO_DIR=/usr/share/arduino
 export ARDMK_DIR=/usr/share/arduino
