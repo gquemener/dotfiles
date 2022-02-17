@@ -29,5 +29,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mileszs/ack.vim'
 
+" GraphQL
+Plug 'jparise/vim-graphql'
 
 call plug#end()
