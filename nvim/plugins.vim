@@ -17,6 +17,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+"Plug 'kosayoda/nvim-lightbulb'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'

@@ -41,6 +41,9 @@ set foldexpr=nvim_treesitter#foldexpr()
 " Reduce timeout len in order to display keybindings help
 set timeoutlen=500
 
+" Reduce CursorHold event firing debounce time
+set updatetime=100
+
 set clipboard+=unnamedplus
 
 autocmd BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
