@@ -12,3 +12,4 @@ ln -s /home/gildas/dotfiles/vimrc /home/gildas/.vimrc
 ln -s /home/gildas/dotfiles/zsh.d /home/gildas/.zsh.d
 ln -s /home/gildas/dotfiles/zshrc /home/gildas/.zshrc
 ln -s /home/gildas/dotfiles/nvim /home/gildas/.config/nvim
+ln -s /home/gildas/dotfiles/yay /home/gildas/.config/yay
