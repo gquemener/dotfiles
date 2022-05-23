@@ -42,7 +42,7 @@ set foldexpr=nvim_treesitter#foldexpr()
 set timeoutlen=500
 
 " Reduce CursorHold event firing debounce time
-set updatetime=100
+set updatetime=300
 
 set clipboard+=unnamedplus
 
@@ -53,3 +53,7 @@ function! <SID>MkdirsIfNotExists(directory)
         call system('mkdir -p '.shellescape(a:directory))
     endif
 endfunction
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile

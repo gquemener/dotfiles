@@ -23,4 +23,7 @@ nnoremap <c-l> <c-w>l
 
 let mapleader=","
 
-nmap <leader>f :Ack <C-r><C-w>
+" Refresh syntax highlighting
+nnoremap <leader>r :syntax sync fromStart<cr>
+
+nnoremap <leader>b :b#<cr>

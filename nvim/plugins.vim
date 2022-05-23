@@ -15,9 +15,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " LSP
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-"Plug 'kosayoda/nvim-lightbulb'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'williamboman/nvim-lsp-installer'
+Plug 'kosayoda/nvim-lightbulb'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -32,5 +33,8 @@ Plug 'mileszs/ack.vim'
 
 " GraphQL
 Plug 'jparise/vim-graphql'
+
+" Vue
+Plug 'posva/vim-vue'
 
 call plug#end()
