@@ -20,6 +20,7 @@
     whitespace = trailing-space,space-before-tab
     attributesfile = ~/.gitattributes
     autocrlf = input
+    hooksPath = ./.githooks
 [web]
     browser = firefox
 [push]
@@ -33,10 +34,10 @@
 [diff]
     mnemonicPrefix = true
 [diff "exif"]
-	textconv = exiftool
+    textconv = exiftool
 [commit]
     gpgsign = false
 [pull]
-	rebase = false
+    rebase = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
