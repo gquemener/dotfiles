@@ -3,3 +3,4 @@
 .netrwhist
 vendor/
 vim/plugged/*
+nvim/plugin/packer_compiled.lua
