@@ -8,7 +8,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 export PROMPT_COMMAND='history -a'
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 export BROWSER=firefox
 export LANG=en_US.UTF-8
