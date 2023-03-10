@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 export BROWSER=chromium
 export LANG=en_US.UTF-8
