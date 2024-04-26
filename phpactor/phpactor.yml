@@ -1,0 +1,3 @@
+logging.enabled: false
+logging.path: '/tmp/phpactor.log'
+logging.level: 'debug'
