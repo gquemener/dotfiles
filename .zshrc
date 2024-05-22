@@ -19,9 +19,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Add in snippets
-zinit snippet OMZP::git
-
 # Load completions
 autoload -U compinit && compinit
 
@@ -30,11 +27,14 @@ autoload -U compinit && compinit
 
 # Keybindings
 bindkey -e
+
+## Navigate history with arrows
 autoload up-line-or-beginning-search
-autoload down-line-or-beginning-search
 zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
 bindkey '^[[A' up-line-or-beginning-search
+
+autoload down-line-or-beginning-search
+zle -N down-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 
 # History
@@ -62,6 +62,7 @@ alias ls='ls --color'
 alias s='git status'
 alias gph='git push'
 alias gpl='git pull'
+alias gpr='git pull --rebase'
 
 # Shell integrations
 eval "$(fzf --zsh)"
