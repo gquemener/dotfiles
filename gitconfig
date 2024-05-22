@@ -16,7 +16,7 @@
     untracked = red
 [core]
     excludesfile = ~/.gitignore_global
-    editor = vim
+    editor = nvim
     whitespace = trailing-space,space-before-tab
     attributesfile = ~/.gitattributes
     autocrlf = input
@@ -39,5 +39,10 @@
     gpgsign = false
 [pull]
     rebase = false
+	default = current
 [init]
     defaultBranch = main
+[status]
+	showUntrackedFiles = all
+[mergetool "meld"]
+	useAutoMerge = true

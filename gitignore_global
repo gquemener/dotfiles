@@ -50,3 +50,6 @@ tags
 
 # IntelliJ
 .idea
+
+# PHPActor
+.phpactor.json
