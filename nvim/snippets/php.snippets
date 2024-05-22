@@ -1,0 +1,24 @@
+snippet xb "breakpoint"
+	xdebug_break();
+
+snippet dvd "dump and die"
+	die(var_dump($1));
+
+snippet $t "$this->" i
+	$$this->$1
+
+snippet $t= "$this equals"
+	$this->$1 = $$1;
+
+snippet fun "function"
+	public function $1($2): $3
+	{
+	    $4
+	}
+
+snippet test "PHPUnit Test"
+	#[Test]
+	public function test$1(): void
+	{
+	    $2
+	}
