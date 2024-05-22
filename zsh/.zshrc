@@ -59,7 +59,12 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
+alias ll='ls -l'
+
+alias md='mkdir -p'
+
 alias s='git status'
+alias gc='git commit'
 alias gph='git push'
 alias gpl='git pull'
 alias gpr='git pull --rebase'
