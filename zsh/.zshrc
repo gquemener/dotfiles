@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+PATH="${PATH}:./vendor/bin"
+
 # Zinit (https://github.com/zdharma-continuum/zinit)
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -68,6 +70,8 @@ alias gc='git commit'
 alias gph='git push'
 alias gpl='git pull'
 alias gpr='git pull --rebase'
+
+alias dc='docker compose'
 
 # Shell integrations
 eval "$(fzf --zsh)"
