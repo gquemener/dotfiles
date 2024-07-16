@@ -1,0 +1,3 @@
+return {
+  { "mracos/mermaid.vim" },
+}
