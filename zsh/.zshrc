@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-PATH="${PATH}:./vendor/bin"
+PATH="${PATH}:/home/gildas/bin:./vendor/bin"
 
 # Zinit (https://github.com/zdharma-continuum/zinit)
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -73,5 +73,9 @@ alias gpr='git pull --rebase'
 
 alias dc='docker compose'
 
-# Shell integrations
+# FZF integrations
 eval "$(fzf --zsh)"
+
+# Sdkman! integration
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "/home/gildas/.sdkman/bin/sdkman-init.sh" ]] && source "/home/gildas/.sdkman/bin/sdkman-init.sh"
