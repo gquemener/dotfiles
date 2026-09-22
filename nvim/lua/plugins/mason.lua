@@ -1,11 +1,10 @@
 return {
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "phpactor",
-        "shellcheck",
-      },
+    {
+        "mason-org/mason.nvim",
+        opts = {
+            ensure_installed = {
+                "shellcheck",
+            },
+        },
     },
-  },
 }
